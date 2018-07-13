@@ -9,6 +9,9 @@
     <title>Tin tức</title>
     <!-- Bootstrap Core CSS -->
     <link href="<?= base_url ?>/asset/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="<?=base_url?>/asset/plugins/bower_components/sidebar-nav/dist/sidebar-nav.min.css" rel="stylesheet">
+    <!-- morris CSS -->
+    <link href="<?=base_url?>/asset/plugins/bower_components/morrisjs/morris.css" rel="stylesheet">
     <!-- animation CSS -->
     <link href="<?= base_url ?>/asset/css/animate.css" rel="stylesheet">
     <!-- Custom CSS -->

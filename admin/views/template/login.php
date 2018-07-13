@@ -17,14 +17,14 @@ include_once('config/define.php');
                 <h3 class="box-title m-b-20">Sign In</h3>
                 <div class="form-group ">
                     <div class="col-xs-12">
-                        <input class="form-control" type="text" required="" name="txtname" placeholder="Username" value="<?php if(isset($_POST['txtname'])){
-                            echo $_POST['txtname'];} ?>">
+                        <input class="form-control" type="email" required="" name="email" placeholder="email" value="<?php if(isset($_POST['email'])){
+                            echo $_POST['email'];} ?>">
                     </div>
                 </div>
                 <div class="form-group">
                     <div class="col-xs-12">
-                        <input class="form-control" type="password" required="" name="txtpass" placeholder="Password" value="<?php if(isset($_POST['txtpass'])){
-                            echo $_POST['txtpass'];} ?>">
+                        <input class="form-control" type="password" required="" name="password" placeholder="Password" value="<?php if(isset($_POST['password'])){
+                            echo $_POST['password'];} ?>">
                     </div>
                 </div>
                 <div class="form-group">
