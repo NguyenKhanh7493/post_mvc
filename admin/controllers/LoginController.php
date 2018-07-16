@@ -1,43 +1,45 @@
 <?php
+ob_start();
+session_start(); ?>
+<?php
 require_once('views/Common.php');
 require_once('models/LoginModel.php');
 require_once('views/LoginView.php');
 class LoginController{
     public function login(){
-//        $viewLogin = new LoginView();
-//        $viewLogin->login();
-//        $username = '';
-//        $password = '';
-//        if (isset($_POST['btnok'])){
-//            $username = $_POST['txtname'];
-//            $password = $_POST['txtpass'];
-//        }
-//        $getLogin = new LoginModel();
-//        $loginData = $getLogin->getLogin($username,$password);
-//        print_r($loginData);die();
-//        if ( $loginData ){
-//            echo "đăng nhập thành công";
-//        }else{
-//            require_once('views/LoginView.php');
-//            echo 'sai mật khẩu';
-//        }
+
         $loginview = new LoginView();
         $loginview->login();
         $email = isset($_POST['email'])?$_POST['email']: '';
         $password = isset($_POST['password'])? md5($_POST['password']): '';
-        if ($email != '' && $password != ''){
-            $loginmodel = new LoginModel();
-            $loginData = $loginmodel->getLogin($email,$password);
-            if ($loginData){
-                $sucesshome = new Common();
-                $sucesshome->index();
+        if (!isset($_SESSION['user'])){
+            if ($email != '' && $password != ''){
+                $loginmodel = new LoginModel();
+                $loginData = $loginmodel->getLogin($email,$password);
+                if ($loginData){
+                    $_SESSION['user'] = $email;
+                    header("Location: http://postmvc.site/admin/?controller=common&action=index");
+                }else{
+                    require_once('views/LoginView.php');
+                    echo "sai ten dang nhap hoac mat khau";
+                }
+//                return $loginData;
             }else{
                 require_once('views/LoginView.php');
-                echo "sai ten dang nhap hoac mat khau";
             }
-            return $loginData;
         }else{
-            require_once('views/LoginView.php');
+            header("Location: http://postmvc.site/admin/?controller=common&action=index");
+            die();
         }
+    }
+
+    public function logout(){
+        session_start();
+        session_unset();
+        session_destroy();
+        ob_start();
+        header("location:http://postmvc.site/admin/?controller=Login&action=login");
+        ob_end_flush();
+        exit();
     }
 }
