@@ -2,13 +2,16 @@
 include_once('views/UserView.php');
 include_once('models/UserModel.php');
 class UserController{
-    public function user(){
+    public function listUser(){
         $list = new UserModel();
         $data = $list->getList();
-        print_r($data);
 
 
         $userview = new UserView();
-        $userview->user();
+        $userview->listUser($data);
+    }
+    public function add(){
+        $addUser = new UserView();
+        $addUser->addUser();
     }
 }

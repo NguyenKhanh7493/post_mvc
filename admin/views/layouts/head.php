@@ -13,6 +13,12 @@
     <!-- morris CSS -->
     <link href="<?=base_url?>/asset/plugins/bower_components/morrisjs/morris.css" rel="stylesheet">
     <!-- animation CSS -->
+    <!--  list user  -->
+    <link href="<?=base_url?>/asset/plugins/bower_components/datatables/jquery.dataTables.min.css" rel="stylesheet" type="text/css" />
+    <link href="../../../cdn.datatables.net/buttons/1.2.2/css/buttons.dataTables.min.css" rel="stylesheet" type="text/css" />
+    <!-- Menu CSS -->
+    <link href="<?=base_url?>/asset/plugins/bower_components/sidebar-nav/dist/sidebar-nav.min.css" rel="stylesheet">
+    <!-- end list user  -->
     <link href="<?= base_url ?>/asset/css/animate.css" rel="stylesheet">
     <!-- Custom CSS -->
     <link href="<?= base_url ?>/asset/css/style.css" rel="stylesheet">

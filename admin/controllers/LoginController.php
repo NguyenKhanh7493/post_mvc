@@ -18,7 +18,7 @@ class LoginController{
                 $loginData = $loginmodel->getLogin($email,$password);
                 if ($loginData){
                     $_SESSION['user'] = $email;
-                    header("Location: http://postmvc.site/admin/?controller=common&action=index");
+                    header("Location: http://postmvc.site/admin/index");
                 }else{
                     require_once('views/LoginView.php');
                     echo "sai ten dang nhap hoac mat khau";
@@ -28,7 +28,7 @@ class LoginController{
                 require_once('views/LoginView.php');
             }
         }else{
-            header("Location: http://postmvc.site/admin/?controller=common&action=index");
+            header("Location: http://postmvc.site/admin/index");
             die();
         }
     }
@@ -38,7 +38,7 @@ class LoginController{
         session_unset();
         session_destroy();
         ob_start();
-        header("location:http://postmvc.site/admin/?controller=Login&action=login");
+        header("location:http://postmvc.site/admin/login");
         ob_end_flush();
         exit();
     }
