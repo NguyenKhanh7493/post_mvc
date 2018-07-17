@@ -34,12 +34,12 @@
             </span> </div>
                         <!-- /input-group -->
                     </li>
-                    <li> <a href="index.html" class="waves-effect active"><i class="linea-icon linea-basic fa-fw" data-icon="v"></i> <span class="hide-menu"> Trang chủ </span></a></li>
+                    <li> <a href="<?= base_url."/index"?>" class="waves-effect active"><i class="linea-icon linea-basic fa-fw" data-icon="v"></i> <span class="hide-menu"> Trang chủ </span></a></li>
                     <li class="nav-small-cap">--- Người dùng</li>
                     <li><a href="javascript:void(0);" class="waves-effect"><i class="icon-people fa-fw"></i> <span class="hide-menu">User<span class="fa arrow"></span></span></a>
                         <ul class="nav nav-second-level">
-                            <li> <a href="crm-leads.html">Thêm</a></li>
-                            <li> <a href="crm-add-leads.html">Danh sách</a></li>
+                            <li> <a href="<?= base_url."/user/add"?>">Thêm</a></li>
+                            <li> <a href="<?= base_url."/user/listUser"?>">Danh sách</a></li>
                         </ul>
                     </li>
                     <li><a href="javascript:void(0);" class="waves-effect"><i class="icon-docs fa-fw"></i> <span class="hide-menu">Bài viết<span class="fa arrow"></span></span></a>
