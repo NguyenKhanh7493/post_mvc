@@ -1,4 +1,5 @@
 <?php
+ob_start();
 class UserView{
     public function listUser($data){
         include_once('layouts/head.php');
@@ -13,5 +14,13 @@ class UserView{
         include_once('layouts/slidebar.php');
         include_once('template/users/formuser.php');
         include_once('layouts/script.php');
+    }
+    public function error($result){
+        if ($result){
+            header("Location: http://postmvc.site/admin/user/listUser");
+            exit();
+        }else{
+            echo 'that bai';
+        }
     }
 }

@@ -11,7 +11,65 @@ class UserController{
         $userview->listUser($data);
     }
     public function add(){
-        $addUser = new UserView();
-        $addUser->addUser();
+            $addUser = new UserView();
+            $addUser->addUser();
+
+//        if(isset($_POST['ok'])){
+//            $name = $_POST['name'];
+//            $email = $_POST['email'];
+//            $pass = $_POST['pass'];
+//            $address = $_POST['address'];
+//            $age = $_POST['age'];
+//            if ($name = ''){
+//                echo "tên không được để trống";
+//            }elseif ($email=''){
+//                echo "email khong duoc de trong";
+//            }elseif ($pass=''){
+//                echo 'mat khau trong';
+//            }elseif ($address = ''){
+//                echo 'khong duoc de trong dia chi';
+//            }elseif ($age = ''){
+//                echo 'khong dươc de trong tuoi';
+//            }elseif (!is_numeric($age)){
+//                echo 'tuoi phai la so';
+//            }else{
+//                $test = new UserModel();
+//                $test->addUser();
+//            }
+//        }
+    }
+    public function addSuccess(){
+        if(isset($_POST['ok'])){
+            $name = $_POST['name'];
+            $email = $_POST['email'];
+            $pass = $_POST['pass'];
+            $address = $_POST['address'];
+            $age = $_POST['age'];
+//            if ($name = ''){
+//                echo "tên không được để trống";
+//            }elseif ($email=''){
+//                echo "email khong duoc de trong";
+//            }elseif ($pass=''){
+//                echo 'mat khau trong';
+//            }elseif ($address = ''){
+//                echo 'khong duoc de trong dia chi';
+//            }elseif ($age = ''){
+//                echo 'khong dươc de trong tuoi';
+//            }elseif (!is_numeric($age)){
+//                echo 'tuoi phai la so';
+//            }else{
+                $data = [
+                    'name' => $name,
+                    'email' => $email,
+                    'password' => $pass,
+                    'address' => $address,
+                    'age' => $age
+                ];
+                $modelUser = new UserModel();
+                $result =  $modelUser->addUser($data);
+                $viewUser = new UserView();
+                $viewUser->addUser($data);
+//            }
+        }
     }
 }

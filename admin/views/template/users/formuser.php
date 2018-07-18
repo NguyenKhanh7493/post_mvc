@@ -1,3 +1,4 @@
+<?php include_once('./config/define.php');?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -27,26 +28,26 @@
 <!--                        <h3 class="box-title m-b-0">Thêm quản trị viên</h3>-->
                         <div class="row">
                             <div class="col-sm-12 col-xs-12">
-                                <form>
+                                <form action="<?=base_url?>/user/addSuccess" method="post">
                                     <div class="form-group">
-                                        <label for="exampleInputEmail1">Họ tên</label>
-                                        <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Enter Username">
+                                        <label for="exampleInputName">Họ tên</label>
+                                        <input type="text" class="form-control" id="exampleInputEmail1" name="name" value="<?php if (isset($_POST['name'])) echo $_POST['name']?>" placeholder="Nhập họ tên">
                                     </div>
                                     <div class="form-group">
                                         <label for="exampleInputEmail1">Email</label>
-                                        <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
+                                        <input type="email" class="form-control" id="exampleInputEmail1" name="email" value="<?php if (isset($_POST['email'])) echo $_POST['email']?>" placeholder="Nhập email">
                                     </div>
                                     <div class="form-group">
                                         <label for="exampleInputPassword1">Mật khẩu</label>
-                                        <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                                        <input type="password" class="form-control" id="exampleInputPassword1" name="pass" placeholder="Mật khẩu">
                                     </div>
                                     <div class="form-group">
-                                        <label for="exampleInputPassword1">Tuổi</label>
-                                        <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Confirm Password">
+                                        <label for="exampleInputAddress">Địa chỉ</label>
+                                        <input type="text" class="form-control" id="exampleInputPassword1" name="address" value="<?php if (isset($_POST['address'])) echo $_POST['address']?>" placeholder="Nhập địa chỉ">
                                     </div>
                                     <div class="form-group">
-                                        <label for="exampleInputPassword1">Địa chỉ</label>
-                                        <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Confirm Password">
+                                        <label for="exampleInputAge">Tuổi</label>
+                                        <input type="text" class="form-control" id="exampleInputPassword1" name="age" value="<?php if (isset($_POST['age'])) echo $_POST['age']?>""  placeholder="Nhập độ tuổi">
                                     </div>
                                     <div class="form-group">
                                         <div class="checkbox checkbox-success">
@@ -54,7 +55,7 @@
                                             <label for="checkbox1"> Remember me </label>
                                         </div>
                                     </div>
-                                    <button type="submit" class="btn btn-success waves-effect waves-light m-r-10">Submit</button>
+                                    <button type="submit" class="btn btn-success waves-effect waves-light m-r-10" name="ok">Submit</button>
                                     <button type="submit" class="btn btn-inverse waves-effect waves-light">Cancel</button>
                                 </form>
                             </div>

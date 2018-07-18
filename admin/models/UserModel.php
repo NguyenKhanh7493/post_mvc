@@ -12,4 +12,10 @@ class UserModel extends C_connect{
         }
         return $data;
     }
+    public function addUser($data){
+        $db = $this->connect();
+        $sql = "INSERT INTO `users`(`id`,`name`,`email`,`password`,`address`,`age`) VALUES (NULL,'".$data['name']."','".$data['email']."','".MD5($data['password'])."','".$data['address']."','".$data['age']."')";
+        $result = $db->query($sql);
+        return $result;
+    }
 }
