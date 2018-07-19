@@ -72,4 +72,11 @@ class UserController{
 //            }
         }
     }
+    public function delete(){
+        $deleteModel = new UserModel();
+        $test = $deleteModel->delete();
+
+        $deleteView = new UserView();
+        $deleteView->addUser($test);
+    }
 }

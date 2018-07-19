@@ -18,4 +18,12 @@ class UserModel extends C_connect{
         $result = $db->query($sql);
         return $result;
     }
+    public function delete(){
+        $db = $this->connect();
+        $id =$_POST['delete_id'];
+        $sql = "DELETE FORM users WHERE id='$id'";
+        $test = $db->query($sql);
+        return $test;
+
+    }
 }

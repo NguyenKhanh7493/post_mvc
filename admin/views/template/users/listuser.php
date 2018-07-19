@@ -49,8 +49,8 @@
                                     <td><?php echo $item['age']?></td>
                                     <td><?php echo $item['address']?></td>
                                     <td>
-                                        <a href="#" id="editItem"><i class="ti-pencil text-success"></i></a> |
-                                        <a href="#" class="delItem"><i class="ti-trash text-danger"></i></a>
+                                        <a href="#" id="editItem" ><i class="ti-pencil text-success"></i></a> |
+                                        <a href="javascript:void(0)" id="delItem" onclick="deleteAjax(<?php echo $item['id']?>);"><i class="ti-trash text-danger"></i></a>
                                     </td>
                                 </tr>
                                 <?php endforeach;?>
@@ -70,7 +70,20 @@
     </div>
     <!-- /#page-wrapper -->
 </div>
+<script type="text/javascript">
+    function deleteAjax(id) {
+        if (confirm('bạn có muốn xóa không?')){
+            $.ajax({
+                type:'post',
+                url:'UserController.php',
+                data:{delete_id:id},
+                success:function(data) {
+                    $('#delItem'+id).hide();
+                }
+            });
+        }
+    }
+</script>
 </body>
-
 <!-- Mirrored from eliteadmin.themedesigner.in/demos/eliteadmin-crm/data-table.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 20 Mar 2017 09:40:39 GMT -->
 </html>
