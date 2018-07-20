@@ -45,19 +45,6 @@ class UserController{
             $pass = $_POST['pass'];
             $address = $_POST['address'];
             $age = $_POST['age'];
-//            if ($name = ''){
-//                echo "tên không được để trống";
-//            }elseif ($email=''){
-//                echo "email khong duoc de trong";
-//            }elseif ($pass=''){
-//                echo 'mat khau trong';
-//            }elseif ($address = ''){
-//                echo 'khong duoc de trong dia chi';
-//            }elseif ($age = ''){
-//                echo 'khong dươc de trong tuoi';
-//            }elseif (!is_numeric($age)){
-//                echo 'tuoi phai la so';
-//            }else{
                 $data = [
                     'name' => $name,
                     'email' => $email,
@@ -73,10 +60,14 @@ class UserController{
         }
     }
     public function delete(){
-        $deleteModel = new UserModel();
-        $test = $deleteModel->delete();
+        if($_POST['id']){
+            $deleteModel = new UserModel();
+            $test = $deleteModel->delete($_POST['id']);
+            // lay ds trong atabase gan vao mot bien va tra ve
+        }
 
-        $deleteView = new UserView();
-        $deleteView->addUser($test);
+//        $deleteView = new UserView();
+//        $deleteView->listUser($test);
     }
+
 }

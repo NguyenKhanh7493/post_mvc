@@ -74,14 +74,15 @@
     function deleteAjax(id) {
         if (confirm('bạn có muốn xóa không?')){
             $.ajax({
-                type:'post',
-                url:'UserController.php',
-                data:{delete_id:id},
-                success:function(data) {
-                    $('#delItem'+id).hide();
-                }
+                url:'http://postmvc.site/admin/?controller=User&action=delete',
+                type: 'POST',
+                data: {id: id}
+            }).success(function(data) {
+                //$('#delItem'+id).hide();
+                //foreach mang data vao html va bo vao the tbody
             });
         }
+
     }
 </script>
 </body>
