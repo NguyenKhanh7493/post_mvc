@@ -6,7 +6,6 @@ class UserController{
         $list = new UserModel();
         $data = $list->getList();
 
-
         $userview = new UserView();
         $userview->listUser($data);
     }
@@ -63,11 +62,18 @@ class UserController{
         if($_POST['id']){
             $deleteModel = new UserModel();
             $test = $deleteModel->delete($_POST['id']);
-            // lay ds trong atabase gan vao mot bien va tra ve
-        }
 
-//        $deleteView = new UserView();
-//        $deleteView->listUser($test);
+            $list_delete = new UserModel();
+            $data = $list_delete->getList();
+            die(json_encode($data));
+        }
+//            $list_delete = new UserModel();
+//            $data = $list_delete->getList();
+//
+//            echo "<pre>";
+//            print_r($data);
+//            echo "</pre>";
+//            die();
     }
 
 }

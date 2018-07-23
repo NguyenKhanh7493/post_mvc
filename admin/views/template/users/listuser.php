@@ -76,11 +76,23 @@
             $.ajax({
                 url:'http://postmvc.site/admin/?controller=User&action=delete',
                 type: 'POST',
+                dataType : 'json',
                 data: {id: id}
-            }).success(function(data) {
-                //$('#delItem'+id).hide();
-                //foreach mang data vao html va bo vao the tbody
-            });
+            })
+            .success(function(data) {
+                var result = '';
+                $.each(data, function(key, item) {
+                    var htmlx =
+                        '<td>'+ item.id + '</td>'+
+                        '<td>'+ item.name + '</td>'+
+                        '<td>'+ item.email + '</td>'+
+                        '<td>'+ item.age + '</td>'+
+                        '<td>'+ item.address + '</td>';
+
+                    result += htmlx;
+//                    window.location.href = 'http://postmvc.site/admin/user/listUser';
+                });
+            }
         }
 
     }
