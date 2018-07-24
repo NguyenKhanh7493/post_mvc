@@ -24,42 +24,42 @@
                 <!-- /.col-lg-12 -->
             </div>
             <!-- /row -->
-            <div class="row">
-                <div class="col-sm-12">
-                    <div class="white-box">
-                        <!--                        <h3 class="box-title m-b-0">Danh sách quản trị viên</h3>-->
-                        <div class="table-responsive">
-                            <table id="myTable" class="table table-striped">
-                                <thead>
-                                <tr>
-                                    <th>ID</th>
-                                    <th>Họ tên</th>
-                                    <th>Email</th>
-                                    <th>Age</th>
-                                    <th>Địa chỉ</th>
-                                    <th>Tùy chọn</th>
-                                </tr>
-                                </thead>
-                                <tbody>
-                                <?php foreach ($data as $item):?>
-                                <tr>
-                                    <td><?php echo $item['id']?></td>
-                                    <td><?php echo $item['name']?></td>
-                                    <td><?php echo $item['email']?></td>
-                                    <td><?php echo $item['age']?></td>
-                                    <td><?php echo $item['address']?></td>
-                                    <td>
-                                        <a href="#" id="editItem" ><i class="ti-pencil text-success"></i></a> |
-                                        <a href="javascript:void(0)" id="delItem" onclick="deleteAjax(<?php echo $item['id']?>);"><i class="ti-trash text-danger"></i></a>
-                                    </td>
-                                </tr>
-                                <?php endforeach;?>
-                                </tbody>
-                            </table>
+                <div class="row" id="test-ajax">
+                    <div class="col-sm-12" >
+                        <div class="white-box">
+                            <!--                        <h3 class="box-title m-b-0">Danh sách quản trị viên</h3>-->
+                            <div class="table-responsive">
+                                <table id="myTable" class="table table-striped">
+                                    <thead>
+                                    <tr>
+                                        <th>ID</th>
+                                        <th>Họ tên</th>
+                                        <th>Email</th>
+                                        <th>Age</th>
+                                        <th>Địa chỉ</th>
+                                        <th>Tùy chọn</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <?php foreach ($data as $item):?>
+                                        <tr id="test">
+                                            <td><?php echo $item['id']?></td>
+                                            <td><?php echo $item['name']?></td>
+                                            <td><?php echo $item['email']?></td>
+                                            <td><?php echo $item['age']?></td>
+                                            <td><?php echo $item['address']?></td>
+                                            <td>
+                                                <a href="#" id="editItem" ><i class="ti-pencil text-success"></i></a> |
+                                                <a href="javascript:void(0)" id="delItem" onclick="deleteAjax(<?php echo $item['id']?>);"><i class="ti-trash text-danger"></i></a>
+                                            </td>
+                                        </tr>
+                                    <?php endforeach;?>
+                                    </tbody>
+                                </table>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
             <!-- /.row -->
             <!-- .right-sidebar -->
 
@@ -72,27 +72,66 @@
 </div>
 <script type="text/javascript">
     function deleteAjax(id) {
-        if (confirm('bạn có muốn xóa không?')){
+        if (confirm('bạn có muốn xóa không '+id+'?')){
             $.ajax({
                 url:'http://postmvc.site/admin/?controller=User&action=delete',
                 type: 'POST',
                 dataType : 'json',
-                data: {id: id}
-            })
-            .success(function(data) {
-                var result = '';
-                $.each(data, function(key, item) {
-                    var htmlx =
-                        '<td>'+ item.id + '</td>'+
-                        '<td>'+ item.name + '</td>'+
-                        '<td>'+ item.email + '</td>'+
-                        '<td>'+ item.age + '</td>'+
-                        '<td>'+ item.address + '</td>';
+                data: {id: id},
+                success :function(data) {
+                    var result = '';
+                    $.each(data, function(key, item) {
+                        var htmlx =
+                            '<tr>' +
+                            '<td>'+ item.id + '</td>'+
+                            '<td>'+ item.name + '</td>'+
+                            '<td>'+ item.email + '</td>'+
+                            '<td>'+ item.age + '</td>'+
+                            '<td>'+ item.address + '</td>' +
+                            '<td>' +
+                                '<a href="#" id="editItem" >' +
+                                '<i class="ti-pencil text-success">' +
+                                '</i>' +
+                                '</a>' + '|' +
 
-                    result += htmlx;
-//                    window.location.href = 'http://postmvc.site/admin/user/listUser';
-                });
-            }
+                                '<a href="javascript:void(0)" id="delItem" onclick="deleteAjax('+item.id+');">' +
+                                '<i class="ti-trash text-danger">' +
+                                '</i>' +
+                                '</a>' +
+                            '</td>' +
+                            '</tr>';
+
+                        result += htmlx;
+
+                    });
+//                    $("#test").html(result);
+                    $("#test-ajax").html(
+//                        '<div class="row">' +
+                            '<div class="col-md-12">' +
+                                '<div class="white-box">' +
+                                    '<div class="table-responsive">' +
+                                        '<table id="myTable" class="table table-striped">' +
+                                            '<thead>' +
+                                                '<tr>' +
+                                                    '<th>' + 'ID' + '</th>' +
+                                                    '<th>' + 'Họ Tên' + '</th>' +
+                                                    '<th>' + 'Email' + '</th>' +
+                                                    '<th>' + 'Age' + '</th>' +
+                                                    '<th>' + 'Address' + '</th>' +
+                                                    '<th>' + 'Tùy chọn' + '</th>' +
+                                                '</tr>' +
+                                            '</thead>' +
+                                            '<tbody>' +
+                                                    result +
+                                            '</tbody>' +
+                                        '</table>' +
+                                    '</div>'+
+                                '</div>'+
+                            '</div>'
+//                        '</div>'
+                    );
+                }
+            });
         }
 
     }

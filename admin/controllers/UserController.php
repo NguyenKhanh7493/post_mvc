@@ -62,7 +62,6 @@ class UserController{
         if($_POST['id']){
             $deleteModel = new UserModel();
             $test = $deleteModel->delete($_POST['id']);
-
             $list_delete = new UserModel();
             $data = $list_delete->getList();
             die(json_encode($data));
@@ -74,6 +73,26 @@ class UserController{
 //            print_r($data);
 //            echo "</pre>";
 //            die();
+    }
+    public function edit(){
+        if($_POST['id']){
+            if(isset($_POST['ok'])){
+                $name = $_POST['name'];
+                $email = $_POST['email'];
+                $pass = $_POST['pass'];
+                $address = $_POST['address'];
+                $age = $_POST['age'];
+                $data = [
+                    'name' => $name,
+                    'email' => $email,
+                    'password' => $pass,
+                    'address' => $address,
+                    'age' => $age
+                ];
+                $editModel = new UserModel();
+                $editModel->getEdit($data,$_POST['id']);
+            }
+        }
     }
 
 }

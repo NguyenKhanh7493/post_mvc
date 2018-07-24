@@ -26,4 +26,10 @@ class UserModel extends C_connect{
         return $test;
 
     }
+    public function getEdit($id,$data){
+        $db = $this->connect();
+        $sql = "UPDATE `users` SET `name` = '".$data['name']."',`email` = '".$data['email']."',`password` = '".MD5($data['password'])."',`address` = '".$data['address']."',`age` = '".$data['age']."' WHERE `id` = '".$id."' ";
+        $result = $db->query($sql);
+        return $result;
+    }
 }
