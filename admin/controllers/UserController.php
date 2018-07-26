@@ -2,6 +2,7 @@
 include_once('views/UserView.php');
 include_once('models/UserModel.php');
 class UserController{
+
     public function listUser(){
         $list = new UserModel();
         $data = $list->getList();
@@ -10,6 +11,7 @@ class UserController{
         $userview->listUser($data);
     }
     public function add(){
+        $target_ = 'http://postmvc/admin/user/add';
             $addUser = new UserView();
             $addUser->addUser();
 
@@ -55,7 +57,7 @@ class UserController{
                 $result =  $modelUser->addUser($data);
                 $viewUser = new UserView();
                 $viewUser->addUser($data);
-//            }
+            echo '<script language="javascript">alert("Thêm thành công"); window.location.href="http://postmvc.site/admin/user/listUser";</script>';
         }
     }
     public function delete(){
@@ -75,6 +77,7 @@ class UserController{
 //            die();
     }
     public function edit(){
+        $target_ = 'http://postmvc/admin/user/edit';
         if($_POST['id']){
             if(isset($_POST['ok'])){
                 $name = $_POST['name'];

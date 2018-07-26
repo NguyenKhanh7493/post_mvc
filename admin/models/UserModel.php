@@ -14,8 +14,14 @@ class UserModel extends C_connect{
     }
     public function addUser($data){
         $db = $this->connect();
-        $sql = "INSERT INTO `users`(`id`,`name`,`email`,`password`,`address`,`age`) VALUES (NULL,'".$data['name']."','".$data['email']."','".MD5($data['password'])."','".$data['address']."','".$data['age']."')";
+        $sql = "SELECT * FROM `users` WHERE email = '".$data['email']."'";
         $result = $db->query($sql);
+        if (mysqli_num_rows($result) > 0){
+            echo '<script language="javascript">alert("Email đã tồn tại"); window.location.href="http://postmvc.site/admin/user/add";</script>';
+        }else{
+            $sql = "INSERT INTO `users`(`id`,`name`,`email`,`password`,`address`,`age`) VALUES (NULL,'".$data['name']."','".$data['email']."','".MD5($data['password'])."','".$data['address']."','".$data['age']."')";
+            $result = $db->query($sql);
+        }
         return $result;
     }
     public function delete($id){
