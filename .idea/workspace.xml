@@ -3,9 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="9685f0d5-5015-4d6c-96cf-f39a338cb987" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/controllers/CommonController.php" afterPath="$PROJECT_DIR$/admin/controllers/CommonController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/controllers/UserController.php" afterPath="$PROJECT_DIR$/admin/controllers/UserController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/models/UserModel.php" afterPath="$PROJECT_DIR$/admin/models/UserModel.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/views/template/users/formuser.php" afterPath="$PROJECT_DIR$/admin/views/template/users/formuser.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/views/template/users/listuser.php" afterPath="$PROJECT_DIR$/admin/views/template/users/listuser.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -44,9 +42,11 @@
       <file leaf-file-name="listuser.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/admin/views/template/users/listuser.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="17" column="22" lean-forward="false" selection-start-line="17" selection-start-column="22" selection-end-line="17" selection-end-column="22" />
-              <folding />
+            <state relative-caret-position="272">
+              <caret line="16" column="77" lean-forward="false" selection-start-line="16" selection-start-column="77" selection-end-line="16" selection-end-column="77" />
+              <folding>
+                <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -127,9 +127,11 @@
       <file leaf-file-name="formuser.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/admin/views/template/users/formuser.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="510">
-              <caret line="30" column="65" lean-forward="false" selection-start-line="30" selection-start-column="65" selection-end-line="30" selection-end-column="75" />
-              <folding />
+            <state relative-caret-position="238">
+              <caret line="14" column="101" lean-forward="false" selection-start-line="14" selection-start-column="101" selection-end-line="14" selection-end-column="101" />
+              <folding>
+                <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -187,12 +189,12 @@
         <option value="$PROJECT_DIR$/admin/xuly.php" />
         <option value="$PROJECT_DIR$/admin/index.php" />
         <option value="$PROJECT_DIR$/admin/views/UserView.php" />
-        <option value="$PROJECT_DIR$/admin/views/template/users/formuser.php" />
         <option value="$PROJECT_DIR$/admin/views/template/login.php" />
         <option value="$PROJECT_DIR$/admin/controllers/LoginController.php" />
         <option value="$PROJECT_DIR$/admin/controllers/CommonController.php" />
         <option value="$PROJECT_DIR$/admin/models/UserModel.php" />
         <option value="$PROJECT_DIR$/admin/controllers/UserController.php" />
+        <option value="$PROJECT_DIR$/admin/views/template/users/formuser.php" />
         <option value="$PROJECT_DIR$/admin/views/template/users/listuser.php" />
       </list>
     </option>
@@ -440,12 +442,12 @@
       <workItem from="1532310483492" duration="18776000" />
       <workItem from="1532395812847" duration="16468000" />
       <workItem from="1532482001858" duration="8477000" />
-      <workItem from="1532568973377" duration="12509000" />
+      <workItem from="1532568973377" duration="13136000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="159490000" />
+    <option name="totallyTimeSpent" value="160117000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1358" y="-234" width="1936" height="1056" extended-state="6" />
@@ -856,17 +858,21 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/admin/views/template/users/formuser.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="30" column="65" lean-forward="false" selection-start-line="30" selection-start-column="65" selection-end-line="30" selection-end-column="75" />
-          <folding />
+        <state relative-caret-position="238">
+          <caret line="14" column="101" lean-forward="false" selection-start-line="14" selection-start-column="101" selection-end-line="14" selection-end-column="101" />
+          <folding>
+            <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/admin/views/template/users/listuser.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="17" column="22" lean-forward="false" selection-start-line="17" selection-start-column="22" selection-end-line="17" selection-end-column="22" />
-          <folding />
+        <state relative-caret-position="272">
+          <caret line="16" column="77" lean-forward="false" selection-start-line="16" selection-start-column="77" selection-end-line="16" selection-end-column="77" />
+          <folding>
+            <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
