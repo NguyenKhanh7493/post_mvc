@@ -16,6 +16,9 @@
 <script src="<?=base_url?>/asset/plugins/bower_components/peity/jquery.peity.init.js"></script>
 
 <!--Wave Effects -->
+<!--<script src="--><?//= base_url ?><!--/asset/js/jquery-3.3.1.js"></script>-->
+<!--<script src="--><?//= base_url ?><!--/asset/js/jquery.validate.min.js"></script>-->
+<!--<script src="--><?//= base_url ?><!--/public/ajax.js"></script>-->
 <script src="<?= base_url ?>/asset/js/waves.js"></script>
 <!-- Custom Theme JavaScript -->
 <script src="<?= base_url ?>/asset/js/custom.min.js"></script>

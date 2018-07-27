@@ -1,7 +1,10 @@
 <?php
-    //ob_start();
+if(!isset($_SESSION))
+{
+    ob_start();
     session_start();
- ?>
+}
+?>
 <?php include_once('config/define.php');?>
 <div id="sidebar"><div id="sidebar-wrapper">
         <div class="navbar-default sidebar" role="navigation">

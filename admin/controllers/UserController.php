@@ -1,7 +1,16 @@
 <?php
+ob_start();
+session_start(); ?>
+<?php
 include_once('views/UserView.php');
 include_once('models/UserModel.php');
 class UserController{
+    function __construct()
+    {
+        if(!isset($_SESSION['user'])){
+            header("Location: http://postmvc.site/admin/login");
+        }
+    }
 
     public function listUser(){
         $list = new UserModel();
