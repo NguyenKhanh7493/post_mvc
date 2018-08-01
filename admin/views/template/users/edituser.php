@@ -14,32 +14,23 @@
                 <div class="col-lg-3 col-md-8 col-sm-8 col-xs-12" style="float: right;font-size: 17px;">
                     <a href="#"><i class="fa fa-list" aria-hidden="true"></i> Danh sách quản trị viên</a>
                 </div>
-<!--                <div class="col-lg-9 col-sm-8 col-md-8 col-xs-12">-->
-<!--                    <a href="https://themeforest.net/item/elite-admin-responsive-dashboard-web-app-kit-/16750820" target="_blank" class="btn btn-danger pull-right m-l-20 btn-rounded btn-outline hidden-xs hidden-sm waves-effect waves-light">Buy Now</a>-->
-<!--                    <ol class="breadcrumb">-->
-<!--                        <li><a href="#">Dashboard</a></li>-->
-<!--                        <li><a href="#">Ui Elements</a></li>-->
-<!--                        <li class="active">Notifications</li>-->
-<!--                    </ol>-->
-<!--                </div>-->
-                <!-- /.col-lg-12 -->
             </div>
             <div class="row">
                 <div class="col-md-3"></div>
                 <div class="col-md-6">
                     <div class="white-box">
-<!--                        <h3 class="box-title m-b-0">Thêm quản trị viên</h3>-->
+                        <!--                        <h3 class="box-title m-b-0">Thêm quản trị viên</h3>-->
                         <div class="row">
                             <div class="col-sm-12 col-xs-12">
-<!--                                --><?//=base_url?><!--/user/addSuccess-->
-                                <form action="<?php echo $link;?>" method="post" name="formAdd" id="formAdd">
+                                <!--                                --><?//=base_url?><!--/user/addSuccess-->
+                                <form action="" method="post" name="formAdd" id="formAdd">
                                     <div class="form-group">
                                         <label for="exampleInputName">Họ tên</label>
-                                        <input type="text" class="form-control" id="name" name="name" value="<?php if (isset($_POST['name'])) echo $_POST['name']?>" placeholder="Nhập họ tên" required>
+                                        <input type="text" class="form-control" id="name" name="name" value="<?php echo $target['name']?>" placeholder="Nhập họ tên" required>
                                     </div>
                                     <div class="form-group">
                                         <label for="exampleInputEmail1">Email</label>
-                                        <input type="email" class="form-control" id="email" name="email" value="<?php if (isset($_POST['email'])) echo $_POST['email']?>" placeholder="Nhập email" required>
+                                        <input type="email" class="form-control" id="email" name="email" value="<?php echo $target['email']?>" placeholder="Nhập email" required>
                                     </div>
                                     <div class="form-group">
                                         <label for="exampleInputPassword1">Mật khẩu</label>
@@ -47,11 +38,11 @@
                                     </div>
                                     <div class="form-group">
                                         <label for="exampleInputAddress">Địa chỉ</label>
-                                        <input type="text" class="form-control" id="address" name="address" value="<?php if (isset($_POST['address'])) echo $_POST['address']?>" placeholder="Nhập địa chỉ" required>
+                                        <input type="text" class="form-control" id="address" name="address" value="<?php echo $target['address']?>" placeholder="Nhập địa chỉ" required>
                                     </div>
                                     <div class="form-group">
                                         <label for="exampleInputAge">Tuổi</label>
-                                        <input type="text" class="form-control" id="age" name="age" value="<?php if (isset($_POST['age'])) echo $_POST['age']?>" placeholder="Nhập độ tuổi" required>
+                                        <input type="text" class="form-control" id="age" name="age" value="<?php echo $target['age']?>" placeholder="Nhập độ tuổi" required>
                                     </div>
                                     <div class="form-group">
                                         <div class="checkbox checkbox-success">

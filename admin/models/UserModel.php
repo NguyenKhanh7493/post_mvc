@@ -38,4 +38,11 @@ class UserModel extends C_connect{
         $result = $db->query($sql);
         return $result;
     }
+    public function editPost($id){
+        $db = $this->connect();
+        $sql = "SELECT * FROM `users` WHERE id = '".$id."'";
+        $item = $db->query($sql);
+        $target = mysqli_fetch_array($item);
+        return $target;
+    }
 }

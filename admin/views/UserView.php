@@ -15,6 +15,13 @@ class UserView{
         include_once('template/users/formuser.php');
         include_once('layouts/script.php');
     }
+    public function editUser($target){
+        include_once('layouts/head.php');
+        include_once('layouts/menu.php');
+        include_once('layouts/slidebar.php');
+        include_once('template/users/edituser.php');
+        include_once('layouts/script.php');
+    }
     public function error($result){
         if ($result){
             header("Location: http://postmvc.site/admin/user/listUser");

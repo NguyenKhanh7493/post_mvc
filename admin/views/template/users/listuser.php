@@ -52,7 +52,7 @@
                                             <td><?php echo $item['age']?></td>
                                             <td><?php echo $item['address']?></td>
                                             <td>
-                                                <a href="#" id="editItem" ><i class="ti-pencil text-success"></i></a> |
+                                                <a href="<?= base_url."/?controller=User&action=edit&id=".$item['id']?>" id="editItem" ><i class="ti-pencil text-success"></i></a> |
                                                 <a href="javascript:void(0)" id="delItem" onclick="deleteAjax(<?php echo $item['id']?>);"><i class="ti-trash text-danger"></i></a>
                                             </td>
                                         </tr>

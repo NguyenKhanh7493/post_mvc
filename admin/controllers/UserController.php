@@ -20,9 +20,9 @@ class UserController{
         $userview->listUser($data);
     }
     public function add(){
-        $target_ = 'http://postmvc/admin/user/add';
+        $link = 'http://postmvc/admin/user/add';
             $addUser = new UserView();
-            $addUser->addUser();
+            $addUser->addUser($link);
 
 //        if(isset($_POST['ok'])){
 //            $name = $_POST['name'];
@@ -86,8 +86,18 @@ class UserController{
 //            die();
     }
     public function edit(){
-        $target_ = 'http://postmvc/admin/user/edit';
-        if($_POST['id']){
+        if(isset($_GET['id'])){
+            $editPost = new UserModel();
+            $target =  $editPost->editPost($_GET['id']);
+
+            $viewEdit = new UserView();
+            $viewEdit->editUser($target);
+        }
+
+    }
+    public function postEdit(){
+        if($_GET['id']){
+            echo "ok";
             if(isset($_POST['ok'])){
                 $name = $_POST['name'];
                 $email = $_POST['email'];
@@ -102,7 +112,12 @@ class UserController{
                     'age' => $age
                 ];
                 $editModel = new UserModel();
-                $editModel->getEdit($data,$_POST['id']);
+                $result = $editModel->getEdit($data,$_GET['id']);
+                print_r($result);
+
+
+                $viewEdit = new UserView();
+                $viewEdit->editUser($result);
             }
         }
     }
