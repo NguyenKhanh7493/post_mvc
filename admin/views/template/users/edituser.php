@@ -34,7 +34,7 @@
                                     </div>
                                     <div class="form-group">
                                         <label for="exampleInputPassword1">Mật khẩu</label>
-                                        <input type="password" class="form-control" id="pass" name="pass" placeholder="Mật khẩu" required>
+                                        <input type="password" class="form-control" id="pass" name="pass" placeholder="Mật khẩu" value="<?php echo $target['email']?>" required>
                                     </div>
                                     <div class="form-group">
                                         <label for="exampleInputAddress">Địa chỉ</label>

@@ -23,30 +23,6 @@ class UserController{
         $link = 'http://postmvc/admin/user/add';
             $addUser = new UserView();
             $addUser->addUser($link);
-
-//        if(isset($_POST['ok'])){
-//            $name = $_POST['name'];
-//            $email = $_POST['email'];
-//            $pass = $_POST['pass'];
-//            $address = $_POST['address'];
-//            $age = $_POST['age'];
-//            if ($name = ''){
-//                echo "tên không được để trống";
-//            }elseif ($email=''){
-//                echo "email khong duoc de trong";
-//            }elseif ($pass=''){
-//                echo 'mat khau trong';
-//            }elseif ($address = ''){
-//                echo 'khong duoc de trong dia chi';
-//            }elseif ($age = ''){
-//                echo 'khong dươc de trong tuoi';
-//            }elseif (!is_numeric($age)){
-//                echo 'tuoi phai la so';
-//            }else{
-//                $test = new UserModel();
-//                $test->addUser();
-//            }
-//        }
     }
     public function addSuccess(){
         if(isset($_POST['ok'])){
@@ -77,13 +53,6 @@ class UserController{
             $data = $list_delete->getList();
             die(json_encode($data));
         }
-//            $list_delete = new UserModel();
-//            $data = $list_delete->getList();
-//
-//            echo "<pre>";
-//            print_r($data);
-//            echo "</pre>";
-//            die();
     }
     public function edit(){
         if(isset($_GET['id'])){
@@ -92,12 +61,7 @@ class UserController{
 
             $viewEdit = new UserView();
             $viewEdit->editUser($target);
-        }
 
-    }
-    public function postEdit(){
-        if($_GET['id']){
-            echo "ok";
             if(isset($_POST['ok'])){
                 $name = $_POST['name'];
                 $email = $_POST['email'];
@@ -113,13 +77,12 @@ class UserController{
                 ];
                 $editModel = new UserModel();
                 $result = $editModel->getEdit($data,$_GET['id']);
-                print_r($result);
-
-
                 $viewEdit = new UserView();
                 $viewEdit->editUser($result);
+                echo '<script language="javascript">alert("sửa thành công thành công"); window.location.href="http://postmvc.site/admin/user/listUser";</script>';
             }
         }
+
     }
 
 }
