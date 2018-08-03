@@ -12,7 +12,7 @@
                     <h4 class="page-title">Thêm quản trị viên</h4>
                 </div>
                 <div class="col-lg-3 col-md-8 col-sm-8 col-xs-12" style="float: right;font-size: 17px;">
-                    <a href="#"><i class="fa fa-list" aria-hidden="true"></i> Danh sách quản trị viên</a>
+                    <a href="<?=base_url?>/user/listUser"><i class="fa fa-list" aria-hidden="true"></i> Danh sách quản trị viên</a>
                 </div>
             </div>
             <div class="row">

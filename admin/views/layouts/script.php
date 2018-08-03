@@ -16,10 +16,10 @@
 <script src="<?=base_url?>/asset/plugins/bower_components/peity/jquery.peity.init.js"></script>
 
 <!--Wave Effects -->
-<script src="<?= base_url ?>/asset/js/jquery-1.7.1.min.js"></script>
-<script src="<?= base_url ?>/asset/js/bootstrap-validate.js"></script>
-<script src="<?= base_url ?>/asset/js/jquery.validate.js"></script>
-<script src="<?= base_url ?>/asset/js/jquery.validate.min.js"></script>
+<!--<script src="--><?//= base_url ?><!--/asset/js/jquery-1.7.1.min.js"></script>-->
+<!--<script src="--><?//= base_url ?><!--/asset/js/bootstrap-validate.js"></script>-->
+<!--<script src="--><?//= base_url ?><!--/asset/js/jquery.validate.js"></script>-->
+<!--<script src="--><?//= base_url ?><!--/asset/js/jquery.validate.min.js"></script>-->
 <script src="<?= base_url ?>/public/ajax.js"></script>
 <script src="<?= base_url ?>/asset/js/waves.js"></script>
 <!-- Custom Theme JavaScript -->

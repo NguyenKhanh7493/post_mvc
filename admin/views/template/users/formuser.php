@@ -12,7 +12,7 @@
                     <h4 class="page-title">Thêm quản trị viên</h4>
                 </div>
                 <div class="col-lg-3 col-md-8 col-sm-8 col-xs-12" style="float: right;font-size: 17px;">
-                    <a href="#"><i class="fa fa-list" aria-hidden="true"></i> Danh sách quản trị viên</a>
+                    <a href="<?=base_url?>/user/listUser"><i class="fa fa-list" aria-hidden="true"></i> Danh sách quản trị viên</a>
                 </div>
 <!--                <div class="col-lg-9 col-sm-8 col-md-8 col-xs-12">-->
 <!--                    <a href="https://themeforest.net/item/elite-admin-responsive-dashboard-web-app-kit-/16750820" target="_blank" class="btn btn-danger pull-right m-l-20 btn-rounded btn-outline hidden-xs hidden-sm waves-effect waves-light">Buy Now</a>-->
@@ -32,7 +32,7 @@
                         <div class="row">
                             <div class="col-sm-12 col-xs-12">
 <!--                                --><?//=base_url?><!--/user/addSuccess-->
-                                <form action="<?php echo $link;?>" method="post" name="formAdd" id="formAdd">
+                                <form action="" method="post" name="formAdd" id="formAdd">
                                     <div class="form-group">
                                         <label for="exampleInputName">Họ tên</label>
                                         <input type="text" class="form-control" id="name" name="name" value="<?php if (isset($_POST['name'])) echo $_POST['name']?>" placeholder="Nhập họ tên" required>

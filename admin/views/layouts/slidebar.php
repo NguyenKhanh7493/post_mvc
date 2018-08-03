@@ -47,9 +47,8 @@ if(!isset($_SESSION))
                     </li>
                     <li><a href="javascript:void(0);" class="waves-effect"><i class="icon-docs fa-fw"></i> <span class="hide-menu">Bài viết<span class="fa arrow"></span></span></a>
                         <ul class="nav nav-second-level">
-                            <li> <a href="crm-customer-report.html">Customer Reports</a></li>
-                            <li> <a href="crm-sales-report.html">Sales Reports</a></li>
-                            <li> <a href="crm-leads-report.html">Leads Reports</a></li>
+                            <li> <a href="#">Thêm</a></li>
+                            <li> <a href="">Danh sách</a></li>
                         </ul>
                     </li>
 <!--                    <li><a href="javascript:void(0);" class="waves-effect"><i class="icon-people fa-fw"></i> <span class="hide-menu">Customers<span class="fa arrow"></span></span></a>-->
