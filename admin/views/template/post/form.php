@@ -47,8 +47,11 @@
                                         <textarea rows="10" cols="65" id="description" name="description"></textarea>
                                     </div>
                                     <div class="form-group">
-                                        <label for="exampleInputAddress">image</label>
-                                        <input type="text" class="form-control" id="image" name="image" value="<?php if (isset($_POST['image'])) echo $_POST['image']?>" placeholder="Nhập địa chỉ" required>
+                                        <div class="white-box">
+                                            <h3 class="box-title">Ảnh bài viết</h3>
+                                            <label for="input-file-disable-remove">You can disable remove button</label>
+                                            <input type="file" id="input-file-disable-remove" class="dropify" data-show-remove="false" name="avatar_name" />
+                                        </div>
                                     </div>
                                     <div class="form-group">
                                             <label for="exampleInputAddress">status</label>
@@ -67,7 +70,7 @@
 <!--                                            <label for="checkbox1"> Remember me </label>-->
 <!--                                        </div>-->
 <!--                                    </div>-->
-                                    <button type="submit" class="btn btn-success waves-effect waves-light m-r-10" name="ok">Submit</button>
+                                    <button type="submit" class="btn btn-success waves-effect waves-light m-r-10" name="btn_ok">Submit</button>
                                     <button type="submit" class="btn btn-inverse waves-effect waves-light">Cancel</button>
                                 </form>
                             </div>
@@ -80,5 +83,6 @@
         <footer class="footer text-center"> 2018 &copy; Nguyễn Khánh N2K </footer>
     </div>
 </div>
+
 </body>
 </html>

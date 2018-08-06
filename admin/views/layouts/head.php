@@ -18,6 +18,7 @@
     <link href="../../../cdn.datatables.net/buttons/1.2.2/css/buttons.dataTables.min.css" rel="stylesheet" type="text/css" />
     <!-- Menu CSS -->
     <link href="<?=base_url?>/asset/plugins/bower_components/sidebar-nav/dist/sidebar-nav.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="<?=base_url?>/asset/plugins/bower_components/dropify/dist/css/dropify.min.css">
     <!-- end list user  -->
     <link href="<?= base_url ?>/asset/css/animate.css" rel="stylesheet">
     <!-- Custom CSS -->
