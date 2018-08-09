@@ -48,11 +48,11 @@
                                     <tr id="test">
                                         <td><?php echo $item['id']?></td>
                                         <td><?php echo $item['title']?></td>
-                                        <td><img src="<?=base_url?>/public/upload/1q.jpg" alt="" width="60"></td>
+                                        <td><img src="<?=base_url?>/public/upload/<?php echo $item['thumbnail']?>" alt="" width="60"></td>
                                         <td><?php echo $item['star_date']?></td>
                                         <td><?php echo $item['status']?></td>
                                         <td>
-                                            <a href="" id="editItem" ><i class="ti-pencil text-success"></i></a> |
+                                            <a href="<?=base_url?>/?controller=Post&action=edit&id=<?php echo $item['id']?>" id="editItem" ><i class="ti-pencil text-success"></i></a> |
                                             <a href="javascript:void(0)" id="delItem" ><i class="ti-trash text-danger"></i></a>
                                         </td>
                                     </tr>

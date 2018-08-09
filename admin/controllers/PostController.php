@@ -23,20 +23,66 @@ class PostController{
     }
     public function addSuccess(){
         if (isset($_POST['btn_ok'])){
-            $title = $_POST['title'];
-            $introduction = $_POST['introduction'];
-            $description = $_POST['description'];
-            $thumbnail = $_FILES['avatar_name'];
-            $img_avatar_name    = '';
-            $img_avatar_name = uploadImage($thumbnail,'../uploads/product/');
-            $data = [
-                'title' => $title,
-                'introduction' => $introduction,
-                'description' => $description,
-                'thumbnail' => $img_avatar_name
-            ];
-            $addModel = new PostModel($data);
-            $addModel->getAdd();
+            if ($_FILES['img']['name'] != ''){
+                $name = $_FILES['img']['name'];
+                $type = pathinfo($name, PATHINFO_EXTENSION);
+                $tmp_name = $_FILES['img']['tmp_name'];
+                $size = $_FILES['img']['size'];
+
+                if ($type === 'jpg' || $type === 'png' || $type === 'gif'){
+                    if ($size < 1048576){
+                        if(move_uploaded_file($tmp_name,'public/upload/'.$name)){
+                            $title = $_POST['title'];
+                            $introduction = $_POST['introduction'];
+                            $description = $_POST['description'];
+                            $status = $_POST['status'];
+                            $data = [
+                                'title' => $title,
+                                'introduction' => $introduction,
+                                'description' => $description,
+                                'name' => $name,
+                                'status' => $status,
+                            ];
+                            $addModel = new PostModel();
+                            $result = $addModel->getAdd($data);
+                            $addView = new PostView();
+                            $addView->addPost($result);
+                            echo '<script type="text/javascript">alert("Thêm thành công");window.location.href="http://postmvc.site/admin/?controller=Post&action=listPost"</script>';
+                        }else
+                            {
+                                echo "Thất bại ở move_upload";
+                        }
+                    }else{
+                        echo "file ảnh quá lớn";
+                    }
+                }else{
+                    echo "Nhập sai đuôi ảnh (mặc định : jpg,gif,png)";
+                }
+            }
+        }
+    }
+    public function edit(){
+        if (isset($_GET['id'])){
+            $modelPost = new PostModel();
+            $target = $modelPost->postEdit($_GET['id']);
+            $viewEdit = new PostView();
+            $viewEdit->editUser($target);
+            if (isset($_POST['btn_edit'])){
+                $title = $_POST['title'];
+                $introduction = $_POST['introduction'];
+                $description = $_POST['description'];
+                $status = $_POST['status'];
+                $data = [
+                    'title' => $title,
+                    'introduction' => $introduction,
+                    'description' => $description,
+                    'status' => $status,
+                ];
+                $editModel = new PostModel();
+                $data = $editModel->getEdit($_GET['id'],$data);
+                $editView = new PostView();
+                $editView->editUser($data);
+            }
         }
     }
 }
