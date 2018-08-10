@@ -28,8 +28,8 @@ class PostModel extends C_connect{
     }
     public function getEdit($id,$data){
         $db = $this->connect();
-        $sql = "UPDATE `posts` SET `name` = '".$data['title']."',`introduction` = '".$data['introduction']."',`description` = '".$data['description']."',`status` = '".$data['status']."' WHERE `id` = '".$id."'";
-        $data = $db->query($sql);
-        return $data;
+        $sql = "UPDATE `posts` SET `title` = '".$data['title']."',`introduction` = '".$data['introduction']."',`description` = '".$data['description']."',`thumbnail` = '".$data['name']."',`status` = '".$data['status']."' WHERE `id` = '".$id."'";
+        $result = $db->query($sql);
+        return $result;
     }
 }

@@ -68,20 +68,34 @@ class PostController{
             $viewEdit = new PostView();
             $viewEdit->editUser($target);
             if (isset($_POST['btn_edit'])){
-                $title = $_POST['title'];
-                $introduction = $_POST['introduction'];
-                $description = $_POST['description'];
-                $status = $_POST['status'];
-                $data = [
-                    'title' => $title,
-                    'introduction' => $introduction,
-                    'description' => $description,
-                    'status' => $status,
-                ];
-                $editModel = new PostModel();
-                $data = $editModel->getEdit($_GET['id'],$data);
-                $editView = new PostView();
-                $editView->editUser($data);
+                if ($_FILES['img']['name'] != ''){
+                    $name = $_FILES['img']['name'];
+                    $type = pathinfo($name, PATHINFO_EXTENSION);
+                    $tmp_name = $_FILES['img']['tmp_name'];
+                    $size = $_FILES['img']['size'];
+                    if ($type === 'jpg' || $type === 'png' || $type === 'gif'){
+                        if ($size < 1048576){
+                            if(move_uploaded_file($tmp_name,'public/upload/'.$name)){
+                                $title = $_POST['title'];
+                                $introduction = $_POST['introduction'];
+                                $description = $_POST['description'];
+                                $status = $_POST['status'];
+                                $data = [
+                                    'title' => $title,
+                                    'introduction' => $introduction,
+                                    'description' => $description,
+                                    'name' =>$name,
+                                    'status' => $status
+                                ];
+                                $editModel = new PostModel();
+                                $result = $editModel->getEdit($_GET['id'],$data);
+                                $editView = new PostView();
+                                $editView->editUser($result);
+                                echo '<script language="javascript">alert("sửa thành công thành công"); window.location.href="http://postmvc.site/admin/?controller=Post&action=listPost";</script>';
+                            }
+                        }
+                    }
+                }
             }
         }
     }
