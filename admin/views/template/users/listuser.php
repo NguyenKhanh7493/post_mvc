@@ -92,7 +92,7 @@
                             '<td>'+ item.age + '</td>'+
                             '<td>'+ item.address + '</td>' +
                             '<td>' +
-                                '<a href="#" id="editItem" >' +
+                                '<a href="http://postmvc.site/admin/?controller=User&action=edit&id='+item.id+'" id="editItem" >' +
                                 '<i class="ti-pencil text-success">' +
                                 '</i>' +
                                 '</a>' + '|' +

@@ -99,4 +99,14 @@ class PostController{
             }
         }
     }
+    public function delete(){
+        if ($_POST['id']){
+            $deleteModel = new PostModel();
+            $result =  $deleteModel->deletePost($_POST['id']);
+
+            $deleteList = new PostModel();
+            $data = $deleteList->getList();
+            die(json_encode($data));
+        }
+    }
 }

@@ -28,7 +28,7 @@
                 <!-- /.col-lg-12 -->
             </div>
             <!-- /row -->
-            <div class="row" id="test-ajax">
+            <div class="row" id="delete-ajax">
                 <div class="col-sm-12" >
                     <div class="white-box">
                         <!--                        <h3 class="box-title m-b-0">Danh sách quản trị viên</h3>-->
@@ -53,7 +53,7 @@
                                         <td><?php echo $item['status']?></td>
                                         <td>
                                             <a href="<?=base_url?>/?controller=Post&action=edit&id=<?php echo $item['id']?>" id="editItem" ><i class="ti-pencil text-success"></i></a> |
-                                            <a href="javascript:void(0)" id="delItem" ><i class="ti-trash text-danger"></i></a>
+                                            <a href="javascript:void(0)" id="delItem" onclick="deletePost(<?php echo $item['id']?>);" ><i class="ti-trash text-danger"></i></a>
                                         </td>
                                     </tr>
                                 <?php endforeach;?>
@@ -73,6 +73,67 @@
     </div>
     <!-- /#page-wrapper -->
 </div>
+<script type="text/javascript">
+    function deletePost(id) {
+        if (confirm('bạn có muốn xóa ' + id + ' không')){
+            $.ajax({
+                url: 'http://postmvc.site/admin/?controller=Post&action=delete',
+                type: 'POST',
+                dataType: 'json',
+                data:{id:id},
+                success:function (data) {
+                    var result = '';
+                    $.each(data,function (key,item) {
+                        var htmlx =
+                            '<tr>' +
+                            '<td>'+ item.id + '</td>'+
+                            '<td>'+ item.title + '</td>'+
+                            '<td><img src="http://postmvc.site/admin/public/upload/'+item.thumbnail+'" width="60"/> </td>'+
+                            '<td>'+ item.star_date + '</td>'+
+                            '<td>'+ item.status + '</td>' +
+                            '<td>' +
+                            '<a href="http://postmvc.site/admin/?controller=Post&action=edit&id='+item.id+'" id="editItem" >' +
+                            '<i class="ti-pencil text-success">' +
+                            '</i>' +
+                            '</a>' + '|' +
+
+                            '<a href="javascript:void(0)" id="delItem" onclick="deletePost('+item.id+');">' +
+                            '<i class="ti-trash text-danger">' +
+                            '</i>' +
+                            '</a>' +
+                            '</td>' +
+                            '</tr>';
+
+                        result += htmlx;
+                    });
+                    $("#delete-ajax").html(
+                        '<div class="col-md-12">' +
+                            '<div class="white-box">' +
+                                '<div class="table-responsive">' +
+                                    '<table id="myTable" class="table table-striped">' +
+                                        '<thead>' +
+                                            '<tr>' +
+                                                '<th>' + 'ID' + '</th>' +
+                                                '<th>' + 'Tiêu đề' + '</th>' +
+                                                '<th>' + 'Ảnh' + '</th>' +
+                                                '<th>' + 'Ngày đăng' + '</th>' +
+                                                '<th>' + 'status' + '</th>' +
+                                                '<th>' + 'Tùy chọn' + '</th>' +
+                                            '</tr>' +
+                                        '</thead>' +
+                                        '<tbody>' +
+                                            result +
+                                        '</tbody>' +
+                                    '</table>' +
+                                '</div>'+
+                            '</div>'+
+                        '</div>'
+                    );
+                }
+            });
+        }
+    }
+</script>
 </body>
 <!-- Mirrored from eliteadmin.themedesigner.in/demos/eliteadmin-crm/data-table.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 20 Mar 2017 09:40:39 GMT -->
 </html>

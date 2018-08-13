@@ -32,4 +32,10 @@ class PostModel extends C_connect{
         $result = $db->query($sql);
         return $result;
     }
+    public function deletePost($id){
+        $db = $this->connect();
+        $sql = "DELETE FROM `posts` WHERE `id` = '".$id."' ";
+        $result = $db->query($sql);
+        return $result;
+    }
 }
