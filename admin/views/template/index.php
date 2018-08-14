@@ -64,7 +64,7 @@
                         </div>
                         <!-- /.modal -->
                         <!-- Button trigger modal -->
-                        <img src="<?=base_url?>/asset/plugins/images/a.jpg" alt="default" data-toggle="modal" data-target="#myModal" class="model_img img-responsive"> </div>
+                        <img src="<?=base_url?>/asset/plugins/images/2.jpg" alt="default" data-toggle="modal" data-target="#myModal" class="model_img img-responsive"> </div>
                 </div>
                 <div class="col-md-4">
                 </div>
