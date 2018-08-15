@@ -30,4 +30,10 @@ class AuthorModel extends C_connect{
         $target = $db->query($sql);
         return $target;
     }
+    public function delete($id){
+        $db = $this->connect();
+        $sql = "DELETE FROM `authors` WHERE `id` = '".$id."'";
+        $result = $db->query($sql);
+        return $result;
+    }
 }

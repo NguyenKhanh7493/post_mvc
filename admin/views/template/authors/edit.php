@@ -80,6 +80,5 @@
         <footer class="footer text-center"> 2018 &copy; Nguyễn Khánh N2K </footer>
     </div>
 </div>
-
 </body>
 </html>

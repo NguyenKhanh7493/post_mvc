@@ -37,7 +37,7 @@ class AuthorController{
                             ];
                             $authorModel = new AuthorModel();
                             $authorModel->addAuth($data);
-                            echo '<script type="text/javascript">alert("Thêm thành công"); window.location.href="http://postmvc.site/admin/?controller=Author&action=listAuth"</script>';
+                            echo '<script type="text/javascript">alert("Thêm thành công"); window.location.href="http://postmvc.site/admin/?controller=Author&action=getList"</script>';
                         }else{
                             echo "Tải ảnh lên thất bại";
                         }
@@ -95,6 +95,16 @@ class AuthorController{
                     }
                 }
             }
+        }
+    }
+    public function delete(){
+        if (isset($_POST['id'])){
+            $modelAuthor = new AuthorModel();
+            $result = $modelAuthor->delete($_POST['id']);
+
+            $listAuthor = new AuthorModel();
+            $data = $listAuthor->getList();
+            die(json_encode($data));
         }
     }
 }

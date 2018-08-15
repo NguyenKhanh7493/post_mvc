@@ -40,7 +40,7 @@ class PostController{
                                 'title' => $title,
                                 'introduction' => $introduction,
                                 'description' => $description,
-                                'name' => $name,
+                                'image' => $name,
                                 'status' => $status,
                             ];
                             $addModel = new PostModel();
@@ -84,7 +84,7 @@ class PostController{
                                     'title' => $title,
                                     'introduction' => $introduction,
                                     'description' => $description,
-                                    'name' =>$name,
+                                    'image' =>$name,
                                     'status' => $status
                                 ];
                                 $editModel = new PostModel();
