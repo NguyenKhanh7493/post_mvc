@@ -1,16 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9685f0d5-5015-4d6c-96cf-f39a338cb987" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/controllers/AuthorController.php" afterPath="$PROJECT_DIR$/admin/controllers/AuthorController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/controllers/PostController.php" afterPath="$PROJECT_DIR$/admin/controllers/PostController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/models/AuthorModel.php" afterPath="$PROJECT_DIR$/admin/models/AuthorModel.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/models/PostModel.php" afterPath="$PROJECT_DIR$/admin/models/PostModel.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/views/layouts/slidebar.php" afterPath="$PROJECT_DIR$/admin/views/layouts/slidebar.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/views/template/authors/edit.php" afterPath="$PROJECT_DIR$/admin/views/template/authors/edit.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/views/template/authors/list.php" afterPath="$PROJECT_DIR$/admin/views/template/authors/list.php" />
-    </list>
+    <list default="true" id="9685f0d5-5015-4d6c-96cf-f39a338cb987" name="Default" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -46,8 +37,8 @@
       <file leaf-file-name="slidebar.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/admin/views/layouts/slidebar.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="646">
-              <caret line="56" column="89" lean-forward="false" selection-start-line="56" selection-start-column="89" selection-end-line="56" selection-end-column="89" />
+            <state relative-caret-position="238">
+              <caret line="32" column="39" lean-forward="false" selection-start-line="32" selection-start-column="39" selection-end-line="32" selection-end-column="39" />
               <folding />
             </state>
           </provider>
@@ -402,7 +393,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../hocweb" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../ers" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -523,12 +514,12 @@
       <workItem from="1533867235607" duration="8862000" />
       <workItem from="1534126983015" duration="11313000" />
       <workItem from="1534211118279" duration="15528000" />
-      <workItem from="1534297495285" duration="6867000" />
+      <workItem from="1534297495285" duration="7477000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="308016000" />
+    <option name="totallyTimeSpent" value="308626000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1358" y="-234" width="1936" height="1056" extended-state="6" />
@@ -990,8 +981,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/admin/views/layouts/slidebar.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="646">
-          <caret line="56" column="89" lean-forward="false" selection-start-line="56" selection-start-column="89" selection-end-line="56" selection-end-column="89" />
+        <state relative-caret-position="238">
+          <caret line="32" column="39" lean-forward="false" selection-start-line="32" selection-start-column="39" selection-end-line="32" selection-end-column="39" />
           <folding />
         </state>
       </provider>
