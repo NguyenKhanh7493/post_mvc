@@ -31,8 +31,7 @@
 <!--                        <h3 class="box-title m-b-0">Thêm quản trị viên</h3>-->
                         <div class="row">
                             <div class="col-sm-12 col-xs-12">
-<!--                                --><?//=base_url?><!--/user/addSuccess-->
-                                <form action="" method="post" name="formAdd" id="formAdd">
+                                <form action="<?=base_url?>/user/addSuccess" method="post" name="formAdd" id="formAdd">
                                     <div class="form-group">
                                         <label for="exampleInputName">Họ tên</label>
                                         <input type="text" class="form-control" id="name" name="name" value="<?php if (isset($_POST['name'])) echo $_POST['name']?>" placeholder="Nhập họ tên" required>
