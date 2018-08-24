@@ -15,7 +15,7 @@ class PostModel extends C_connect{
     public function getAdd($data){
         $db = $this->connect();
         $date = date('Y/m/d');
-        $sql = "INSERT INTO `posts`(`id`,`title`,`introduction`,`description`,`thumbnail`,`star_date`,`status`) VALUES (NULL,'".$data['title']."','".$data['introduction']."','".$data['description']."','".$data['image']."','".$date."','".$data['status']."')";
+        $sql = "INSERT INTO `posts` (`id`,`title`,`introduction`,`description`,`thumbnail`,`star_date`,`status`) VALUES (NULL,'".$data['title']."','".$data['introduction']."','".$data['description']."','".$data['image']."','".$date."','".$data['status']."')";
         $result = $db->query($sql);
         return $result;
     }

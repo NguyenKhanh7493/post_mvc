@@ -48,7 +48,7 @@
                                     <tr id="test">
                                         <td><?php echo $item['id']?></td>
                                         <td><?php echo $item['title']?></td>
-                                        <td><img src="<?=base_url?>/public/upload/<?php echo $item['thumbnail']?>" alt="" width="60"></td>
+                                        <td><img src="<?=base_url?>/public/upload/post/<?php echo $item['thumbnail']?>" alt="" width="60"></td>
                                         <td><?php echo $item['star_date']?></td>
                                         <td><?php echo $item['status']?></td>
                                         <td>

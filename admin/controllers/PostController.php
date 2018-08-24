@@ -31,7 +31,7 @@ class PostController{
 
                 if ($type === 'jpg' || $type === 'png' || $type === 'gif'){
                     if ($size < 1048576){
-                        if(move_uploaded_file($tmp_name,'public/upload/'.$name)){
+                        if(move_uploaded_file($tmp_name,'public/upload/post/'.$name)){
                             $title = $_POST['title'];
                             $introduction = $_POST['introduction'];
                             $description = $_POST['description'];
@@ -75,7 +75,7 @@ class PostController{
                     $size = $_FILES['img']['size'];
                     if ($type === 'jpg' || $type === 'png' || $type === 'gif'){
                         if ($size < 1048576){
-                            if(move_uploaded_file($tmp_name,'public/upload/'.$name)){
+                            if(move_uploaded_file($tmp_name,'public/upload/post/'.$name)){
                                 $title = $_POST['title'];
                                 $introduction = $_POST['introduction'];
                                 $description = $_POST['description'];
