@@ -51,7 +51,7 @@
                                     <div id="showImg" align="center">
                                         <div class="form-group" id="parentImg">
                                             <a href="javascript:void(0)" class="clearImg text-danger " type="button"  data-id="12"><i class="fa fa-times"></i></a>
-                                            <img src="<?=base_url?>/public/upload/<?php echo $target['thumbnail']?>" alt="" width="150">
+                                            <img src="<?=base_url?>/public/upload/post/<?php echo $target['thumbnail']?>" alt="" width="150">
                                         </div>
                                     </div>
                                     <div class="form-group">

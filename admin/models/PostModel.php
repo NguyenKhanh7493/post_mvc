@@ -16,8 +16,8 @@ class PostModel extends C_connect{
         $db = $this->connect();
         $date = date('Y/m/d');
         $sql = "INSERT INTO `posts` (`id`,`title`,`introduction`,`description`,`thumbnail`,`star_date`,`status`) VALUES (NULL,'".$data['title']."','".$data['introduction']."','".$data['description']."','".$data['image']."','".$date."','".$data['status']."')";
-        $result = $db->query($sql);
-        return $result;
+        $test = $db->query($sql);
+        return $test;
     }
     public function postEdit($id){
         $db = $this->connect();

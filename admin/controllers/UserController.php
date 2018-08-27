@@ -41,7 +41,7 @@ class UserController{
                 $modelUser = new UserModel();
                 $result =  $modelUser->addUser($data);
                 $viewUser = new UserView();
-                $viewUser->addUser($data);
+                $viewUser->addUser();
             echo '<script language="javascript">alert("Thêm thành công"); window.location.href="http://postmvc.site/admin/user/listUser";</script>';
         }
     }

@@ -44,9 +44,9 @@ class PostController{
                                 'status' => $status,
                             ];
                             $addModel = new PostModel();
-                            $result = $addModel->getAdd($data);
+                            $test = $addModel->getAdd($data);
                             $addView = new PostView();
-                            $addView->addPost($result);
+                            $addView->addPost();
                             echo '<script type="text/javascript">alert("Thêm thành công");window.location.href="http://postmvc.site/admin/?controller=Post&action=listPost"</script>';
                         }else
                             {
