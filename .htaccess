@@ -1,0 +1,6 @@
+RewriteEngine On
+RewriteRule "trang-chu" "?controller=Home&action=index"
+#RewriteRule "^([a-zA-Z0-9]+)$" "?controller=Common&action=$1"
+#RewriteRule "^user/([a-zA-Z0-9]+)$" "?controller=User&action=$1"
+#RewriteRule "^user/([a-zA-Z0-9]+)$" "?controller=User&action=$1"
+#RewriteRule "^('Mũ là bắt đầu 1 chuỗi')$('Kết thúc 1 chuỗi')" "?controller=Login&action=login"

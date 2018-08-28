@@ -60,6 +60,15 @@
                                                 <option>2</option>
                                             </select>
                                     </div>
+                                    <div class="form-group">
+                                        <label for="exampleInputAddress">author</label>
+                                        <select class="form-control" id="author_id" name="author_id">
+                                            <option>tác giả</option>
+                                            <?php foreach ($data as $target):?>
+                                            <option><?php echo $target['authorname']?></option>
+                                            <?php endforeach;?>
+                                        </select>
+                                    </div>
 <!--                                    <div class="form-group">-->
 <!--                                        <label for="exampleInputAge">date</label>-->
 <!--                                        <input type="date" class="form-control" id="date" name="date" value="--><?php //if (isset($_POST['date'])) echo $_POST['date']?><!--" placeholder="Nhập độ tuổi" required>-->

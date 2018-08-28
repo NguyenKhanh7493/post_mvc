@@ -18,8 +18,10 @@ class PostController{
         $viewPost->listPost($data);
     }
     public function add(){
+        $addjoin = new PostModel();
+        $data = $addjoin->addJoin();
         $addPost = new PostView();
-        $addPost->addPost();
+        $addPost->addPost($data);
     }
     public function addSuccess(){
         if (isset($_POST['btn_ok'])){
@@ -42,6 +44,7 @@ class PostController{
                                 'description' => $description,
                                 'image' => $name,
                                 'status' => $status,
+                                'author_id' => 2
                             ];
                             $addModel = new PostModel();
                             $test = $addModel->getAdd($data);
