@@ -7,7 +7,7 @@ class PostView{
         include_once('template/post/list.php');
         include_once('layouts/script.php');
     }
-    public function addPost($data){
+    public function addPost($data,$type_news){
         include_once('layouts/head.php');
         include_once('layouts/menu.php');
         include_once('layouts/slidebar.php');

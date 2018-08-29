@@ -20,8 +20,10 @@ class PostController{
     public function add(){
         $addjoin = new PostModel();
         $data = $addjoin->addJoin();
+        $typejoin = new PostModel();
+        $type_news = $typejoin->addTypeNews();
         $addPost = new PostView();
-        $addPost->addPost($data);
+        $addPost->addPost($data,$type_news);
     }
     public function addSuccess(){
         if (isset($_POST['btn_ok'])){
@@ -38,13 +40,14 @@ class PostController{
                             $introduction = $_POST['introduction'];
                             $description = $_POST['description'];
                             $status = $_POST['status'];
+                            $author_id = $_POST['author_id'];
                             $data = [
                                 'title' => $title,
                                 'introduction' => $introduction,
                                 'description' => $description,
                                 'image' => $name,
                                 'status' => $status,
-                                'author_id' => 2
+                                'author_id' => $author_id
                             ];
                             $addModel = new PostModel();
                             $test = $addModel->getAdd($data);

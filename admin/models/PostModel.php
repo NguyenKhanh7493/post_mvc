@@ -12,11 +12,25 @@ class PostModel extends C_connect{
         }
         return $data;
     }
+    public function addTypeNews(){
+        $db  =$this->connect();
+//        $select = "SELECT `type_news`.`name` as type_news_name FROM `posts` INNER JOIN `type_news` ON `posts`.`type_news_id` = `type_news`.`id`";
+        $select = "SELECT * FROM `type_news`";
+        $sql = $db->query($select);
+        $type_news = array();
+        if ($sql->num_rows > 0){
+            while ($target = mysqli_fetch_assoc($sql)){
+                $type_news[] = $target;
+            }
+        }
+
+        return $type_news;
+    }
     public function addJoin(){
         $db  =$this->connect();
-        $select = "SELECT `authors`.`name` as authorname FROM `posts` INNER JOIN `authors` ON `posts`.`author_id` = `authors`.`id`";
+//        $select = "SELECT `authors`.`name` as authorname FROM `posts` INNER JOIN `authors` ON `posts`.`author_id` = `authors`.`id`";
+        $select = "SELECT * FROM `authors`";
         $sql = $db->query($select);
-
         $data = array();
         if ($sql->num_rows > 0){
             while ($result = mysqli_fetch_assoc($sql)){

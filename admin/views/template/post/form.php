@@ -45,7 +45,9 @@
                                         <label for="exampleInputPassword1">description</label>
 <!--                                        <input type="password" class="form-control" id="description" name="description" placeholder="Mật khẩu" value="--><?php //if (isset($_POST['description'])) echo $_POST['description']?><!--" required>-->
                                         <textarea rows="10" cols="65" id="description" name="description" placeholder="Nhập nội dung"></textarea>
+
                                     </div>
+                                    <script>    CKEDITOR.replace( 'description' );</script>
                                     <div class="form-group">
                                         <div class="white-box">
                                             <h3 class="box-title">Ảnh bài viết</h3>
@@ -65,7 +67,16 @@
                                         <select class="form-control" id="author_id" name="author_id">
                                             <option>tác giả</option>
                                             <?php foreach ($data as $target):?>
-                                            <option><?php echo $target['authorname']?></option>
+                                            <option><?php echo $target['name']?></option>
+                                            <?php endforeach;?>
+                                        </select>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="exampleInputAddress">chọn loại tin</label>
+                                        <select class="form-control" id="type_news" name="type_news">
+                                            <option>loại tin</option>
+                                            <?php foreach ($type_news as $result):?>
+                                            <option><?php echo $result['name']?></option>
                                             <?php endforeach;?>
                                         </select>
                                     </div>

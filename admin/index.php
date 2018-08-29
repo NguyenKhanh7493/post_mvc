@@ -11,7 +11,10 @@ if(isset($_GET['id'])){
 }else{
     $controller->$action();
 }
-
+//include_once('models/PostModel.php');
+//$typejoin = new PostModel();
+//$type_news = $typejoin->addTypeNews();
+//print_r($type_news);
 
 
 

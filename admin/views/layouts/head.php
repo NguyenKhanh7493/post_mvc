@@ -25,6 +25,7 @@
     <link href="<?= base_url ?>/asset/css/style.css" rel="stylesheet">
     <!-- color CSS -->
     <link href="<?= base_url ?>/asset/css/colors/gray-dark.css" id="theme"  rel="stylesheet">
+    <script type="text/javascript" src="<?=base_url?>/asset/ckeditor/ckeditor.js"></script>
     <![endif]-->
     <script>
         (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
