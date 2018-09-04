@@ -17,6 +17,11 @@
             <li><a href="#">Điện thoại</a></li>
             <li><a href="#">Điện tử</a></li>
             <li><a href="#">Game</a></li>
+            foreach($menu as $item){
+                <li>
+                    <a href="href">name</a>
+                </li>
+            }
         </ul>
         <div id="search">
             <input type="text" value="Từ khóa" />
