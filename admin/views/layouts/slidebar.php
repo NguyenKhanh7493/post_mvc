@@ -57,6 +57,12 @@ if(!isset($_SESSION))
                             <li> <a href="<?=base_url."/?controller=Author&action=getList"?>">Danh sách</a></li>
                         </ul>
                     </li>
+                    <li><a href="javascript:void(0);" class="waves-effect"><i class="icon-docs fa-fw"></i> <span class="hide-menu">Quản lý menu<span class="fa arrow"></span></span></a>
+                        <ul class="nav nav-second-level">
+                            <li> <a href="<?=base_url."/?controller=Menu&action=listMenu"?>">Thêm</a></li>
+                            <li> <a href="<?=base_url."/?controller=Menu&action=listMenu"?>">Danh sách</a></li>
+                        </ul>
+                    </li>
 <!--                    <li><a href="javascript:void(0);" class="waves-effect"><i class="icon-people fa-fw"></i> <span class="hide-menu">Customers<span class="fa arrow"></span></span></a>-->
 <!--                        <ul class="nav nav-second-level">-->
 <!--                            <li> <a href="crm-customers.html">All Customers</a></li>-->

@@ -10,18 +10,18 @@
     <div id="menu">
         <ul class="clearfix">
             <li class="active"><a href="#">Trang chủ</a></li>
-            <li><a href="#">Viễn thông</a></li>
-            <li><a href="#">Máy tính</a></li>
-            <li><a href="#">Phần mềm</a></li>
-            <li><a href="#">Thiết bị số</a></li>
-            <li><a href="#">Điện thoại</a></li>
-            <li><a href="#">Điện tử</a></li>
-            <li><a href="#">Game</a></li>
-            foreach($menu as $item){
-                <li>
-                    <a href="href">name</a>
-                </li>
-            }
+            <li><a href="#">ANH</a>
+                <ul class="sub-menu">
+                    <li><a href="#">Tin tổng hợp</a></li>
+                    <li><a href="#">Video</a></li>
+                </ul>
+            </li>
+            <li><a href="#">TÂY BAN NHA</a></li>
+            <li><a href="#">ĐỨC</a></li>
+            <li><a href="#">ITALYA</a></li>
+            <li><a href="#">PHÁP</a></li>
+            <li><a href="#">VIỆT NAM</a></li>
+            <li><a href="#">LIÊN HỆ</a></li>
         </ul>
         <div id="search">
             <input type="text" value="Từ khóa" />
