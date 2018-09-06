@@ -3,7 +3,10 @@ include_once('views/MenuView.php');
 include_once('models/MenuModel.php');
 class MenuController{
     public function listMenu(){
-        echo 'menu ne';
+        $model = new MenuModel();
+        $data = $model->listMenu();
+        $view = new MenuView();
+        $view->listMenu($data);
     }
     public function add(){
         $menuModel = new MenuModel();
@@ -23,7 +26,6 @@ class MenuController{
             ];
             $modelMenu =new MenuModel();
             $sql = $modelMenu->getAdd($data);
-            print_r($sql);
             $viewMenu = new MenuView();
             $viewMenu->addMenu($sql);
         }
