@@ -30,4 +30,12 @@ class MenuController{
             $viewMenu->addMenu($sql);
         }
     }
+    public function edit(){
+        if (isset($_GET['id'])){
+            $model = new MenuModel();
+            $target =  $model->getEdit($_GET['id']);
+            $view = new MenuView();
+            $view->edit($target);
+        }
+    }
 }

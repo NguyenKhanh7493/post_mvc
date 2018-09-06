@@ -59,7 +59,7 @@ if(!isset($_SESSION))
                     </li>
                     <li><a href="javascript:void(0);" class="waves-effect"><i class="icon-docs fa-fw"></i> <span class="hide-menu">Quản lý menu<span class="fa arrow"></span></span></a>
                         <ul class="nav nav-second-level">
-                            <li> <a href="<?=base_url."/?controller=Menu&action=listMenu"?>">Thêm</a></li>
+                            <li> <a href="<?=base_url."/?controller=Menu&action=add"?>">Thêm</a></li>
                             <li> <a href="<?=base_url."/?controller=Menu&action=listMenu"?>">Danh sách</a></li>
                         </ul>
                     </li>

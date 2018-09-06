@@ -58,7 +58,7 @@
                                             <?php endforeach;?>
                                         </td>
                                         <td>
-                                            <a href="<?=base_url?>/?controller=Post&action=edit&id=<?php echo $item['id']?>" id="editItem" ><i class="ti-pencil text-success"></i></a> |
+                                            <a href="<?=base_url?>/?controller=Menu&action=edit&id=<?php echo $item['id']?>" id="editItem" ><i class="ti-pencil text-success"></i></a> |
                                             <a href="javascript:void(0)" id="delItem" onclick="deletePost(<?php echo $item['id']?>);" ><i class="ti-trash text-danger"></i></a>
                                         </td>
                                     </tr>

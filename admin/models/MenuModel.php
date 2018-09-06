@@ -28,5 +28,10 @@ class MenuModel extends C_connect{
         $sql = $db->query("INSERT INTO `type_news` (`id`, `name`, `status`, `parent_id`) VALUES (NULL, '".$data['name']."', '".$data['status']."', '".$data['parent_id']."');");
         return $sql;
     }
-//    public function potsAdd($data){}
+    public function getEdit($id){
+        $db = $this->connect();
+        $result = $db->query("SELECT * FROM `type_news` WHERE id = '".$id."'");
+        $target = mysqli_fetch_array($result);
+        return $target;
+    }
 }
