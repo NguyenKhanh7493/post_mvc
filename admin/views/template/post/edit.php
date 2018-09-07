@@ -57,8 +57,8 @@
                                     <div class="form-group">
                                         <label for="exampleInputAddress">status</label>
                                         <select class="form-control" id="status" name="status">
-                                            <option><?php echo $target['status']?></option>
-                                            <option>2</option>
+                                            <option value="1" <?php if($target['status'] == '1') echo "selected='selected'" ?> >1</option>
+                                            <option value="2"  <?php if($target['status'] == '2') echo "selected='selected'" ?> >2</option>
                                         </select>
                                     </div>
                                     <button type="submit" class="btn btn-success waves-effect waves-light m-r-10" name="btn_edit">Submit</button>
@@ -77,3 +77,7 @@
 
 </body>
 </html>
+
+<?php
+    print_r($target);
+?>

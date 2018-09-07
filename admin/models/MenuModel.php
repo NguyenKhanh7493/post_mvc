@@ -34,4 +34,14 @@ class MenuModel extends C_connect{
         $target = mysqli_fetch_array($result);
         return $target;
     }
+    public function Menulist(){
+        $db = $this->connect();
+        $data = $db->query("SELECT * FROM `type_news`");
+        return $data;
+    }
+    public function postEdit($id,$data){
+        $db = $this->connect();
+        $data = $db->query("UPDATE `type_news` SET `name` = '".$data['name']."',`status` = '".$data['status']."',`parent_id` = '".$data['parent_id']."' WHERE `id` = '".$id."'");
+        return $data;
+    }
 }

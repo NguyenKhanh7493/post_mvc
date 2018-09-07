@@ -25,6 +25,10 @@
 <!-- Custom Theme JavaScript -->
 <script src="<?= base_url ?>/asset/js/custom.min.js"></script>
 <script src="<?=base_url?>/asset/js/dashboard1.js"></script>
+<script src="<?=base_url?>/asset/plugins/bower_components/footable/js/footable.all.min.js"></script>
+<script src="<?=base_url?>/asset/plugins/bower_components/bootstrap-select/bootstrap-select.min.js" type="text/javascript"></script>
+<!--FooTable init-->
+<script src="<?=base_url?>/asset/js/footable-init.js"></script>
 <!--Style Switcher -->
 <script src="<?=base_url?>/asset/plugins/bower_components/dropify/dist/js/dropify.min.js"></script>
 <script>

@@ -30,27 +30,32 @@
                                     <div class="form-group">
                                         <label for="exampleInputAddress">status</label>
                                         <select class="form-control" id="status" name="status">
-                                            <option>1</option>
-                                            <option>2</option>
+                                            <option value="1" <?php if($target['status'] == '1') echo "selected='selected'" ?> >1</option>
+                                            <option value="2"  <?php if($target['status'] == '2') echo "selected='selected'" ?> >2</option>
                                         </select>
                                     </div>
                                     <div class="form-group">
                                         <label for="exampleInputAddress">parent_id</label>
                                         <select class="form-control" id="parent_id" name="parent_id">
                                             <option value="0">Menu Parent</option>
-<!--                                            --><?php //foreach ($data as $item):?>
-<!--                                                --><?php //if ($item['parent_id'] == 0):?>
-<!--                                                    <option value="--><?php //echo $item['id']?><!--">--><?php //echo $item['name']?><!--</option>-->
-<!--                                                    --><?php //foreach ($data as $ite):?>
-<!--                                                        --><?php //if ($item['id'] == $ite['parent_id']):?>
-<!--                                                            <option value="--><?php //echo $ite['id']?><!--"> -- --><?php //echo $ite['name']?><!--</option>-->
-<!--                                                        --><?php //endif;?>
-<!--                                                    --><?php //endforeach;?>
-<!--                                                --><?php //endif;?>
-<!--                                            --><?php //endforeach;?>
+                                            <?php foreach ($listmenu as $item):?>
+                                                <?php if ($item['parent_id'] == 0):?>
+                                                    <?php if ($target['parent_id'] == $item['id']):?>
+                                                        <option value="<?php echo $item['id']?>" selected="selected"><?php echo $item['name']?></option>
+                                                    <?php else:?>
+                                                        <option value="<?php echo $item['id']?>"><?php echo $item['name']?></option>
+                                                        <?php endif; ?>
+
+                                                    <?php foreach ($listmenu as $ite):?>
+                                                        <?php if ($item['id'] == $ite['parent_id']):?>
+                                                            <option value="<?php echo $ite['id']?>"> -- <?php echo $ite['name']?></option>
+                                                        <?php endif;?>
+                                                    <?php endforeach;?>
+                                                <?php endif;?>
+                                            <?php endforeach;?>
                                         </select>
                                     </div>
-                                    <button type="submit" class="btn btn-success waves-effect waves-light m-r-10" name="btn_success">Submit</button>
+                                    <button type="submit" class="btn btn-success waves-effect waves-light m-r-10" name="btn_edit">Submit</button>
                                     <button type="submit" class="btn btn-inverse waves-effect waves-light">Cancel</button>
                                 </form>
                             </div>
