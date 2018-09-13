@@ -10,3 +10,9 @@ if(isset($_GET['id'])){
 }else{
     $controller->$action();
 }
+//include_once ('models/HomeModel.php');
+//$nameM = new HomeModel();
+//$a = $nameM->hotNews();
+//echo "<pre>";
+//print_r($a);
+//echo "</pre>";

@@ -1,7 +1,8 @@
-
+<?php include_once('./config/define.php')?>
 <!DOCTYPE html>
 <html lang="en">
-    <body class="fix-sidebar">
+
+<body class="fix-sidebar">
 <!-- Preloader -->
 <div class="preloader">
     <div class="cssload-speeding-wheel"></div>
@@ -11,251 +12,79 @@
         <div class="container-fluid">
             <div class="row bg-title">
                 <div class="col-lg-3 col-md-4 col-sm-4 col-xs-12">
-                    <h4 class="page-title">List Menu</h4>
+                    <h4 class="page-title">Danh sách quản trị viên</h4>
                 </div>
-                <div class="col-lg-9 col-sm-8 col-md-8 col-xs-12">
-                    <a href="https://themeforest.net/item/elite-admin-responsive-dashboard-web-app-kit-/16750820" target="_blank" class="btn btn-danger pull-right m-l-20 btn-rounded btn-outline hidden-xs hidden-sm waves-effect waves-light">Buy Now</a>
-                    <ol class="breadcrumb">
-                        <li><a href="#">Dashboard</a></li>
-                        <li><a href="#">Tables</a></li>
-                        <li class="active">Foo Tables</li>
-                    </ol>
+                <div class="col-lg-3 col-md-8 col-sm-8 col-xs-12" style="float: right;font-size: 17px;">
+                    <a href="<?=base_url?>/?controller=Menu&action=add"><i class="fa fa-plus" aria-hidden="true"></i> Thêm quản trị viên</a>
                 </div>
+<!--                                <div class="col-lg-9 col-sm-8 col-md-8 col-xs-12">-->
+<!--                                    <a href="https://themeforest.net/item/elite-admin-responsive-dashboard-web-app-kit-/16750820" target="_blank" class="btn btn-danger pull-right m-l-20 btn-rounded btn-outline hidden-xs hidden-sm waves-effect waves-light">Buy Now</a>-->
+<!--                                    <ol class="breadcrumb">-->
+<!--                                        <li><a href="#">Dashboard</a></li>-->
+<!--                                        <li><a href="#">Table</a></li>-->
+<!--                                        <li class="active">Data Table</li>-->
+<!--                                    </ol>-->
+<!--                                </div>-->
+<!--                 /.col-lg-12 -->
             </div>
-            <div class="row">
-                <div class="col-lg-12">
+            <!-- /row -->
+            <div class="row" id="delete-ajax">
+                <div class="col-sm-12" >
                     <div class="white-box">
-                        <h3 class="box-title m-b-0">Row Toggler</h3>
-                        <p class="text-muted m-b-20">Create your table with Toggle Footable</p>
-                        <table id="demo-foo-row-toggler" class="table toggle-circle table-hover">
-                            <thead>
-                            <tr>
-                                <th data-toggle="true"> First Name </th>
-                                <th> Last Name </th>
-                                <th data-hide="phone"> Job Title </th>
-                                <th data-hide="all"> DOB </th>
-                                <th data-hide="all"> Status </th>
-                            </tr>
-                            </thead>
-                            <tbody>
-                            <tr>
-                                <td>Isidra</td>
-                                <td>Boudreaux</td>
-                                <td>Traffic Court Referee</td>
-                                <td>22 Jun 1972</td>
-                                <td><span class="label label-table label-success">Active</span></td>
-                            </tr>
-                            <tr>
-                                <td>Shona</td>
-                                <td>Woldt</td>
-                                <td>Airline Transport Pilot</td>
-                                <td>3 Oct 1981</td>
-                                <td><span class="label label-table label-inverse">Disabled</span></td>
-                            </tr>
-                            <tr>
-                                <td>Granville</td>
-                                <td>Leonardo</td>
-                                <td>Business Services Sales Representative</td>
-                                <td>19 Apr 1969</td>
-                                <td><span class="label label-table label-danger">Suspended</span></td>
-                            </tr>
-                            <tr>
-                                <td>Easer</td>
-                                <td>Dragoo</td>
-                                <td>Drywall Stripper</td>
-                                <td>13 Dec 1977</td>
-                                <td><span class="label label-table label-success">Active</span></td>
-                            </tr>
-                            <tr>
-                                <td>Maple</td>
-                                <td>Halladay</td>
-                                <td>Aviation Tactical Readiness Officer</td>
-                                <td>30 Dec 1991</td>
-                                <td><span class="label label-table label-danger">Suspended</span></td>
-                            </tr>
-                            <tr>
-                                <td>Maxine</td>
-                                <td><a href="#">Woldt</a></td>
-                                <td><a href="#">Business Services Sales Representative</a></td>
-                                <td>17 Oct 1987</td>
-                                <td><span class="label label-table label-inverse">Disabled</span></td>
-                            </tr>
-                            <tr>
-                                <td>Lorraine</td>
-                                <td>Mcgaughy</td>
-                                <td>Hemodialysis Technician</td>
-                                <td>11 Nov 1983</td>
-                                <td><span class="label label-table label-inverse">Disabled</span></td>
-                            </tr>
-                            <tr>
-                                <td>Lizzee</td>
-                                <td><a href="#">Goodlow</a></td>
-                                <td>Technical Services Librarian</td>
-                                <td>1 Nov 1961</td>
-                                <td><span class="label label-table label-danger">Suspended</span></td>
-                            </tr>
-                            <tr>
-                                <td>Judi</td>
-                                <td>Badgett</td>
-                                <td>Electrical Lineworker</td>
-                                <td>23 Jun 1981</td>
-                                <td><span class="label label-table label-success">Active</span></td>
-                            </tr>
-                            <tr>
-                                <td>Lauri</td>
-                                <td>Hyland</td>
-                                <td>Blackjack Supervisor</td>
-                                <td>15 Nov 1985</td>
-                                <td><span class="label label-table label-danger">Suspended</span></td>
-                            </tr>
-                            <tr>
-                                <td>Isidra</td>
-                                <td>Boudreaux</td>
-                                <td>Traffic Court Referee</td>
-                                <td>22 Jun 1972</td>
-                                <td><span class="label label-table label-success">Active</span></td>
-                            </tr>
-                            <tr>
-                                <td>Shona</td>
-                                <td>Woldt</td>
-                                <td>Airline Transport Pilot</td>
-                                <td>3 Oct 1981</td>
-                                <td><span class="label label-table label-inverse">Disabled</span></td>
-                            </tr>
-                            <tr>
-                                <td>Granville</td>
-                                <td>Leonardo</td>
-                                <td>Business Services Sales Representative</td>
-                                <td>19 Apr 1969</td>
-                                <td><span class="label label-table label-danger">Suspended</span></td>
-                            </tr>
-                            <tr>
-                                <td>Easer</td>
-                                <td>Dragoo</td>
-                                <td>Drywall Stripper</td>
-                                <td>13 Dec 1977</td>
-                                <td><span class="label label-table label-success">Active</span></td>
-                            </tr>
-                            <tr>
-                                <td>Maple</td>
-                                <td>Halladay</td>
-                                <td>Aviation Tactical Readiness Officer</td>
-                                <td>30 Dec 1991</td>
-                                <td><span class="label label-table label-danger">Suspended</span></td>
-                            </tr>
-                            <tr>
-                                <td>Maxine</td>
-                                <td><a href="#">Woldt</a></td>
-                                <td><a href="#">Business Services Sales Representative</a></td>
-                                <td>17 Oct 1987</td>
-                                <td><span class="label label-table label-inverse">Disabled</span></td>
-                            </tr>
-                            <tr>
-                                <td>Lorraine</td>
-                                <td>Mcgaughy</td>
-                                <td>Hemodialysis Technician</td>
-                                <td>11 Nov 1983</td>
-                                <td><span class="label label-table label-inverse">Disabled</span></td>
-                            </tr>
-                            <tr>
-                                <td>Lizzee</td>
-                                <td><a href="#">Goodlow</a></td>
-                                <td>Technical Services Librarian</td>
-                                <td>1 Nov 1961</td>
-                                <td><span class="label label-table label-danger">Suspended</span></td>
-                            </tr>
-                            <tr>
-                                <td>Judi</td>
-                                <td>Badgett</td>
-                                <td>Electrical Lineworker</td>
-                                <td>23 Jun 1981</td>
-                                <td><span class="label label-table label-success">Active</span></td>
-                            </tr>
-                            <tr>
-                                <td>Lauri</td>
-                                <td>Hyland</td>
-                                <td>Blackjack Supervisor</td>
-                                <td>15 Nov 1985</td>
-                                <td><span class="label label-table label-danger">Suspended</span></td>
-                            </tr>
-                            <tr>
-                                <td>Isidra</td>
-                                <td>Boudreaux</td>
-                                <td>Traffic Court Referee</td>
-                                <td>22 Jun 1972</td>
-                                <td><span class="label label-table label-success">Active</span></td>
-                            </tr>
-                            <tr>
-                                <td>Shona</td>
-                                <td>Woldt</td>
-                                <td>Airline Transport Pilot</td>
-                                <td>3 Oct 1981</td>
-                                <td><span class="label label-table label-inverse">Disabled</span></td>
-                            </tr>
-                            <tr>
-                                <td>Granville</td>
-                                <td>Leonardo</td>
-                                <td>Business Services Sales Representative</td>
-                                <td>19 Apr 1969</td>
-                                <td><span class="label label-table label-danger">Suspended</span></td>
-                            </tr>
-                            <tr>
-                                <td>Easer</td>
-                                <td>Dragoo</td>
-                                <td>Drywall Stripper</td>
-                                <td>13 Dec 1977</td>
-                                <td><span class="label label-table label-success">Active</span></td>
-                            </tr>
-                            <tr>
-                                <td>Maple</td>
-                                <td>Halladay</td>
-                                <td>Aviation Tactical Readiness Officer</td>
-                                <td>30 Dec 1991</td>
-                                <td><span class="label label-table label-danger">Suspended</span></td>
-                            </tr>
-                            <tr>
-                                <td>Maxine</td>
-                                <td><a href="#">Woldt</a></td>
-                                <td><a href="#">Business Services Sales Representative</a></td>
-                                <td>17 Oct 1987</td>
-                                <td><span class="label label-table label-inverse">Disabled</span></td>
-                            </tr>
-                            <tr>
-                                <td>Lorraine</td>
-                                <td>Mcgaughy</td>
-                                <td>Hemodialysis Technician</td>
-                                <td>11 Nov 1983</td>
-                                <td><span class="label label-table label-inverse">Disabled</span></td>
-                            </tr>
-                            <tr>
-                                <td>Lizzee</td>
-                                <td><a href="#">Goodlow</a></td>
-                                <td>Technical Services Librarian</td>
-                                <td>1 Nov 1961</td>
-                                <td><span class="label label-table label-danger">Suspended</span></td>
-                            </tr>
-                            <tr>
-                                <td>Judi</td>
-                                <td>Badgett</td>
-                                <td>Electrical Lineworker</td>
-                                <td>23 Jun 1981</td>
-                                <td><span class="label label-table label-success">Active</span></td>
-                            </tr>
-                            <tr>
-                                <td>Lauri</td>
-                                <td>Hyland</td>
-                                <td>Blackjack Supervisor</td>
-                                <td>15 Nov 1985</td>
-                                <td><span class="label label-table label-danger">Suspended</span></td>
-                            </tr>
-                            </tbody>
-                        </table>
+                        <!--                        <h3 class="box-title m-b-0">Danh sách quản trị viên</h3>-->
+                        <div class="table-responsive">
+                            <table id="myTable" class="table table-striped">
+                                <thead>
+                                <tr>
+                                    <th>ID</th>
+                                    <th>name</th>
+                                    <th>status</th>
+                                    <th>parent_id</th>
+                                    <th>tùy chọn</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <?php foreach ($data as $item):?>
+                                    <?php if ($item['parent_id'] == 0):?>
+                                    <tr id="test">
+                                        <td><?php echo $item['id']?></td>
+                                        <td><?php echo $item['name']?></td>
+                                        <td><?php echo $item['status']?></td>
+                                        <td><?php echo $item['name']?>
+                                            <?php foreach ($data as $target):?>
+                                                <?php if($item['id'] == $target['parent_id']):?>
+                                                    <li> ++ <?php echo $target['name']?></li>
+                                                <?php endif;?>
+                                            <?php endforeach;?>
+                                        </td>
+                                        <td>
+                                            <a href="<?=base_url?>/?controller=Menu&action=edit&id=<?php echo $item['id']?>" id="editItem" ><i class="ti-pencil text-success"></i></a> |
+                                            <a href="javascript:void(0)" id="delItem" onclick="deletePost(<?php echo $item['id']?>//);" ><i class="ti-trash text-danger"></i></a>
+                                         </td>
+                                    </tr>
+                                    <?php endif;?>
+                                <?php endforeach;?>
+                                <style type="text/css">
+                                    #test li{
+                                        list-style: none;
+                                    }
+                                </style>
+                                </tbody>
+                            </table>
+                        </div>
                     </div>
                 </div>
             </div>
+<!--             /.row -->
+<!--             .right-sidebar -->
+<!---->
+<!--             /.right-sidebar -->
         </div>
-        <footer class="footer text-center"> 2017 &copy; Elite Admin brought to you by themedesigner.in </footer>
+        <!-- /.container-fluid -->
+        <footer class="footer text-center"> 2018 &copy; Nguyễn Khánh N2K </footer>
     </div>
+    <!-- /#page-wrapper -->
 </div>
 </body>
+<!-- Mirrored from eliteadmin.themedesigner.in/demos/eliteadmin-crm/data-table.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 20 Mar 2017 09:40:39 GMT -->
 </html>
