@@ -19,7 +19,7 @@
                 <nav class="flex-child nav__wrap d-none d-lg-block">
                     <ul class="nav__menu">
                         <li class="active">
-                            <a href="index.html">Home</a>
+                            <a href="index.html">HOME</a>
                         </li>
 
                         <?php foreach ($data as $item):?>
@@ -112,7 +112,7 @@
     <div class="container relative">
         <span class="trending-now__label">Tin cập nhật</span>
         <ul class="newsticker">
-            <li class="newsticker__item"><a href="single-post.html" class="newsticker__item-url">Hình ảnh áo đấu các đội bóng đá Ngoại hạng anh mùa 2-18/2019</a></li>
+            <li class="newsticker__item"><a href="single-post.html" class="newsticker__item-url">Hình ảnh áo đấu các đội bóng đá Ngoại hạng anh mùa 2018/2019</a></li>
             <li class="newsticker__item"><a href="single-post-1.html" class="newsticker__item-url">Hình ảnh các cầu thủ MU trên sân tập</a></li>
             <li class="newsticker__item"><a href="single-post-3.html" class="newsticker__item-url">L.Shaw có thể quay trở lại trận đấu cuối tuần này sau chấn thương</a></li>
         </ul>

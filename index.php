@@ -12,7 +12,7 @@ if(isset($_GET['id'])){
 }
 //include_once ('models/HomeModel.php');
 //$nameM = new HomeModel();
-//$a = $nameM->hotNews();
+//$a = $nameM->topNews();
 //echo "<pre>";
 //print_r($a);
 //echo "</pre>";

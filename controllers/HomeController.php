@@ -4,9 +4,12 @@ class HomeController{
     public function index(){
         $menuModel = new HomeModel();
         $data = $menuModel->menu();
-        $parent_id = "";
+
         $hotnewModel = new HomeModel();
-        $target = $hotnewModel->hotNews();
+        $target = $hotnewModel->hotNews_slide();
+
+        $top_news = new HomeModel();
+        $val = $top_news->topNews();
         include_once('views/index.php');
     }
 //    public function dequy($data,$parent_id){
