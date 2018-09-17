@@ -38,4 +38,26 @@ class HomeModel extends C_connect{
         }
         return $val;
     }
+    public function football_vietnam(){
+        $db = $this->connect();
+        $sql = $db ->query("SELECT * FROM `posts` WHERE `type_news_id` = 8 ORDER BY `id` DESC LIMIT 1");
+        $fb_vn = array();
+        if ($sql->num_rows > 0){
+            while ($result = mysqli_fetch_assoc($sql)){
+                $fb_vn[] = $result;
+            }
+        }
+        return $fb_vn;
+    }
+    public function football_vietnam_right(){
+        $db = $this->connect();
+        $sql = $db ->query("SELECT * FROM `posts` WHERE `type_news_id` = 8 ORDER BY `id` DESC LIMIT 7");
+        $fb_vn_right = array();
+        if ($sql->num_rows > 0){
+            while ($result = mysqli_fetch_assoc($sql)){
+                $fb_vn_right[] = $result;
+            }
+        }
+        return $fb_vn_right;
+    }
 }

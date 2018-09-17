@@ -10,6 +10,12 @@ class HomeController{
 
         $top_news = new HomeModel();
         $val = $top_news->topNews();
+
+        $fb_vietnam = new HomeModel();
+        $fb_vn = $fb_vietnam->football_vietnam();
+
+        $fb_vietnam = new HomeModel();
+        $fb_vn_right = $fb_vietnam->football_vietnam_right();
         include_once('views/index.php');
     }
 //    public function dequy($data,$parent_id){
