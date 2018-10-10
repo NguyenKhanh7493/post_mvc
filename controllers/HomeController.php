@@ -16,6 +16,18 @@ class HomeController{
 
         $fb_vietnam = new HomeModel();
         $fb_vn_right = $fb_vietnam->football_vietnam_right();
+        $fb_view = new HomeModel();
+        $views = $fb_view->news_views_top();
+
+        $fb_english = new HomeModel();
+        $fb_en = $fb_english->football_english();
+        $fb_en_view = new HomeModel();
+        $fb_en_right = $fb_en_view->football_english_right();
+
+        $fb_english = new HomeModel();
+        $fb_bn = $fb_english->football_taybannha();
+        $fb_bn_view = new HomeModel();
+        $fb_bn_right = $fb_bn_view->football_taybannha_right();
         include_once('views/index.php');
     }
 //    public function dequy($data,$parent_id){

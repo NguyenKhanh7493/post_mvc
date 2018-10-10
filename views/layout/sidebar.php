@@ -2,52 +2,85 @@
 
     <!-- Widget Social Subscribers -->
     <div class="widget widget-social-subscribers">
-        <ul class="widget-social-subscribers__list">
-            <li class="widget-social-subscribers__item">
-                <a href="#" class="widget-social-subscribers__url widget-social-subscribers--facebook">
-                    <i class="ui-facebook widget-social-subscribers__icon"></i>
-                    <span class="widget-social-subscribers__number">15369</span>
-                    <span class="widget-social-subscribers__text">Fans</span>
-                </a>
-            </li>
-            <li class="widget-social-subscribers__item">
-                <a href="#" class="widget-social-subscribers__url widget-social-subscribers--twitter">
-                    <i class="ui-twitter widget-social-subscribers__icon"></i>
-                    <span class="widget-social-subscribers__number">15369</span>
-                    <span class="widget-social-subscribers__text">Followers</span>
-                </a>
-            </li>
-            <li class="widget-social-subscribers__item">
-                <a href="#" class="widget-social-subscribers__url widget-social-subscribers--google">
-                    <i class="ui-google widget-social-subscribers__icon"></i>
-                    <span class="widget-social-subscribers__number">15369</span>
-                    <span class="widget-social-subscribers__text">Followers</span>
-                </a>
-            </li>
-            <li class="widget-social-subscribers__item">
-                <a href="#" class="widget-social-subscribers__url widget-social-subscribers--rss">
-                    <i class="ui-rss widget-social-subscribers__icon"></i>
-                    <span class="widget-social-subscribers__number">15369</span>
-                    <span class="widget-social-subscribers__text">Subscribers</span>
-                </a>
-            </li>
-            <li class="widget-social-subscribers__item">
-                <a href="#" class="widget-social-subscribers__url widget-social-subscribers--youtube">
-                    <i class="ui-youtube widget-social-subscribers__icon"></i>
-                    <span class="widget-social-subscribers__number">15369</span>
-                    <span class="widget-social-subscribers__text">Subscribers</span>
-                </a>
-            </li>
-            <li class="widget-social-subscribers__item">
-                <a href="#" class="widget-social-subscribers__url widget-social-subscribers--instagram">
-                    <i class="ui-instagram widget-social-subscribers__icon"></i>
-                    <span class="widget-social-subscribers__number">15369</span>
-                    <span class="widget-social-subscribers__text">Followers</span>
-                </a>
-            </li>
-        </ul>
+        <div class="fxthome" style="border:solid 1px #ddd;">
+            <div class="tabs"><a class="sel" href="http://bongdaplus.vn/ket-qua.html" style="width:100%;">KẾT QUẢ</a>
+                <div class="splf"></div><div class="clr"></div>
+            </div><div class="tabitm"><table class="fxtbl" cellpadding="0" cellspacing="0">
+                    <tbody>
+                    <tr><th class="grp" colspan="11"> | <b style="font-weight: bold">Champions League C1</b></th></tr>
+                    <tr><td class="hme">Porto</td><td class="tme">1-0</td><td class="awy">Galatasaray</td>
+                    </tr><tr><td class="hme">PSV Eindhoven</td><td class="tme">1-2</td><td class="awy">Inter Milan</td>
+                    </tr><tr><td class="hme">Atletico Madrid</td><td class="tme">3-1</td><td class="awy">Club Brugge</td>
+                    </tr><tr><td class="hme">Dortmund</td><td class="tme">3-0</td><td class="awy">AS Monaco</td></tr><tr>
+                        <td class="hme">Napoli</td><td class="tme">1-0</td><td class="awy">Liverpool</td></tr><tr>
+                        <td class="hme">Tottenham</td><td class="tme">2-4</td><td class="awy">Barcelona</td></tr><tr>
+                        <td class="hme">Lokomotiv Moscow</td><td class="tme">0-1</td><td class="awy">Schalke 04</td></tr>
+                    <tr><td class="hme">PSG</td><td class="tme">6-1</td><td class="awy">Crvena Zvezda</td></tr><tr><td class="hme">AEK Athens</td><td class="tme">2-3</td>
+                        <td class="awy">Benfica</td></tr><tr><td class="hme">Lyonnais</td><td class="tme">2-2</td>
+                        <td class="awy">Shakhtar Donetsk</td></tr></tbody></table></div></div>
     </div>
-
+    <style type="text/css">
+        .fxthome .tabs {
+            background: #ccc;
+            font-size: 16px;}
+        .fxtbl, .stdtbl {
+            font-size: 12px;
+            line-height: 24px;}
+        table {
+            width: 100%;
+        }
+        .fxtbl .grp, .stdtbl .grp {
+            background: #fff;
+            border-bottom: solid 1px #aaa;
+            font-weight: normal;
+            line-height: 20px;
+            height: 24px;
+            text-align: left;
+            text-transform: uppercase;}
+        .fxtbl, .stdtbl {
+            font-size: 12px;
+            line-height: 24px;}
+        .fxtbl .hme {
+            color: #333;
+            font-weight: bold;
+            text-align: right;}
+        .fxthome td {
+            background: #fff;
+            padding: 5px 0;
+            line-height: 18px;}
+        .fxtbl td, .stdtbl td {
+            border-bottom: solid 1px #ddd;
+            padding: 0 2px;
+            text-align: center;
+            vertical-align: top;}
+        .fxthome .tme, .fxthome .sco {
+            width: 60px;
+        }
+        .fxtbl .tme, .fxtbl .sco, .stdtbl .idx, .fxtbl .tme a, .fxtbl .sco a {
+            color: #666;
+            font-weight: bold;}
+        .fxthome .awy, .fxthome .team {
+            width: 115px;
+        }
+        .fxtbl .awy, .stdtbl .team {
+            color: #333;
+            font-weight: bold;
+            text-align: left;}
+        .fxthome .tabs a {
+            background: #ccc;
+            color: #000;
+            font-weight: normal;
+            padding: 0 10px;
+        }
+        .tabs a {
+            display: block;
+            font-weight: bold;
+            float: left;
+            line-height: 30px;
+            text-align: center;
+            text-transform: uppercase;
+        }
+    </style>
     <!-- Widget Newsletter -->
     <div class="widget widget_mc4wp_form_widget">
         <h4 class="widget-title">Subscribe for news</h4>
@@ -67,15 +100,15 @@
     <div class="widget widget-tabpost">
         <div class="tabs widget-tabpost__tabs">
             <ul class="tabs__list widget-tabpost__tabs-list">
-                <li class="tabs__item widget-tabpost__tabs-item tabs__item--active">
-                    <a href="#tab-trending" class="tabs__url tabs__trigger widget-tabpost__tabs-url">Trending</a>
+                <li class="tabs__item widget-tabpost__tabs-item tabs__item--active" style="border-bottom: 2px solid #fc6d41;">
+                    <a href="#tab-trending" class="tabs__url tabs__trigger widget-tabpost__tabs-url" style="font-size: 17px;">TIN XEM NHIỀU</a>
                 </li>
-                <li class="tabs__item widget-tabpost__tabs-item">
+                <!-- <li class="tabs__item widget-tabpost__tabs-item">
                     <a href="#tab-latest" class="tabs__url tabs__trigger widget-tabpost__tabs-url">Latest</a>
                 </li>
                 <li class="tabs__item widget-tabpost__tabs-item">
                     <a href="#tab-comments" class="tabs__url tabs__trigger widget-tabpost__tabs-url">Comments</a>
-                </li>
+                </li> -->
             </ul> <!-- end tabs -->
 
             <!-- tab content -->
@@ -83,98 +116,34 @@
 
                 <div class="tabs__content-pane tabs__content-pane--active" id="tab-trending">
                     <ul class="post-list-small">
+                    <?php foreach($views as $views):?>
                         <li class="post-list-small__item">
                             <article class="post-list-small__entry clearfix">
                                 <div class="post-list-small__img-holder">
                                     <div class="thumb-container thumb-75">
                                         <a href="single-post.html">
-                                            <img data-src="<?php base_url?>/assets/img/blog/popular_post_1.jpg" src="<?php base_url?>/assets/img/empty.png" alt="" class=" lazyload">
+                                            <img data-src="http://postmvc.site/admin/public/upload/post/f448606e61d833855b53eed0ae6c4180.jpg" src="<?php base_url?>/assets/img/empty.png" alt="" class=" lazyload">
                                         </a>
                                     </div>
                                 </div>
                                 <div class="post-list-small__body">
                                     <h3 class="post-list-small__entry-title">
-                                        <a href="single-post.html">Google is fixing its troubling burger emoji in Android 8.1</a>
+                                        <a href="single-post.html"><?php echo $views['title']?></a>
                                     </h3>
                                     <ul class="entry__meta">
                                         <li class="entry__meta-date">
                                             <i class="ui-date"></i>
-                                            21 October, 2017
+                                            <?php echo $views['views']?> views
                                         </li>
                                     </ul>
                                 </div>
                             </article>
                         </li>
-                        <li class="post-list-small__item">
-                            <article class="post-list-small__entry clearfix">
-                                <div class="post-list-small__img-holder">
-                                    <div class="thumb-container thumb-75">
-                                        <a href="single-post.html">
-                                            <img data-src="<?php base_url?>/assets/img/blog/popular_post_2.jpg" src="<?php base_url?>/assets/img/empty.png" alt="" class=" lazyload">
-                                        </a>
-                                    </div>
-                                </div>
-                                <div class="post-list-small__body">
-                                    <h3 class="post-list-small__entry-title">
-                                        <a href="single-post.html">How Meditation Can Transform Your Business</a>
-                                    </h3>
-                                    <ul class="entry__meta">
-                                        <li class="entry__meta-date">
-                                            <i class="ui-date"></i>
-                                            21 October, 2017
-                                        </li>
-                                    </ul>
-                                </div>
-                            </article>
-                        </li>
-                        <li class="post-list-small__item">
-                            <article class="post-list-small__entry clearfix">
-                                <div class="post-list-small__img-holder">
-                                    <div class="thumb-container thumb-75">
-                                        <a href="single-post.html">
-                                            <img data-src="<?php base_url?>/assets/img/blog/popular_post_3.jpg" src="<?php base_url?>/assets/img/empty.png" alt="" class=" lazyload">
-                                        </a>
-                                    </div>
-                                </div>
-                                <div class="post-list-small__body">
-                                    <h3 class="post-list-small__entry-title">
-                                        <a href="single-post.html">June in Africa: Taxi wars, smarter cities and increased investments</a>
-                                    </h3>
-                                    <ul class="entry__meta">
-                                        <li class="entry__meta-date">
-                                            <i class="ui-date"></i>
-                                            21 October, 2017
-                                        </li>
-                                    </ul>
-                                </div>
-                            </article>
-                        </li>
-                        <li class="post-list-small__item">
-                            <article class="post-list-small__entry clearfix">
-                                <div class="post-list-small__img-holder">
-                                    <div class="thumb-container thumb-75">
-                                        <a href="single-post.html">
-                                            <img data-src="<?php base_url?>/assets/img/blog/popular_post_4.jpg" src="<?php base_url?>/assets/img/empty.png" alt="" class=" lazyload">
-                                        </a>
-                                    </div>
-                                </div>
-                                <div class="post-list-small__body">
-                                    <h3 class="post-list-small__entry-title">
-                                        <a href="single-post.html">PUBG Desert Map Finally Revealed, Here Are All The Details</a>
-                                    </h3>
-                                    <ul class="entry__meta">
-                                        <li class="entry__meta-date">
-                                            <i class="ui-date"></i>
-                                            21 October, 2017
-                                        </li>
-                                    </ul>
-                                </div>
-                            </article>
-                        </li>
+                    <?php endforeach;?>
                     </ul>
                 </div>
 
-                <div class="tabs__content-pane" id="tab-latest">
+                <!-- <div class="tabs__content-pane" id="tab-latest">
                     <ul class="post-list-small">
                         <li class="post-list-small__item">
                             <article class="post-list-small__entry clearfix">
@@ -265,9 +234,9 @@
                             </article>
                         </li>
                     </ul>
-                </div>
+                </div> -->
 
-                <div class="tabs__content-pane" id="tab-comments">
+                <!-- <div class="tabs__content-pane" id="tab-comments">
                     <ul class="post-list-small">
                         <li class="post-list-small__item">
                             <article class="post-list-small__entry clearfix">
@@ -358,7 +327,7 @@
                             </article>
                         </li>
                     </ul>
-                </div>
+                </div> -->
 
             </div> <!-- end tab content -->
         </div> <!-- end tabs -->
@@ -372,28 +341,26 @@
     </div> <!-- end widget ad 300 -->
 
     <!-- Widget Socials -->
+    <div id="fb-root"></div>
+<script>
+(function(d, s, id) 
+{
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = 'https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v3.1';
+  fjs.parentNode.insertBefore(js, fjs);
+}
+(document, 'script', 'facebook-jssdk'));
+</script>
+    <!--  -->
     <div class="widget widget-socials">
-        <h4 class="widget-title">Follow us</h4>
-        <div class="socials">
-            <a class="social social-facebook social--large" href="#" title="facebook" target="_blank" aria-label="facebook">
-                <i class="ui-facebook"></i>
-            </a><!--
-              --><a class="social social-twitter social--large" href="#" title="twitter" target="_blank" aria-label="twitter">
-                <i class="ui-twitter"></i>
-            </a><!--
-              --><a class="social social-google-plus social--large" href="#" title="google" target="_blank" aria-label="google">
-                <i class="ui-google"></i>
-            </a><!--
-              --><a class="social social-instagram social--large" href="#" title="instagram" target="_blank" aria-label="instagram">
-                <i class="ui-instagram"></i>
-            </a><!--
-              --><a class="social social-youtube social--large" href="#" title="youtube" target="_blank" aria-label="youtube">
-                <i class="ui-youtube"></i>
-            </a><!--
-              --><a class="social social-rss social--large" href="#" title="rss" target="_blank" aria-label="rss">
-                <i class="ui-rss"></i>
-            </a>
-        </div>
+        <h4 class="widget-title">LIKE PAGE FACEBOOK</h4>
+        <div class="fb-page" data-href="https://www.facebook.com/facebook" data-tabs="272"
+         data-width="300" data-height="250" data-small-header="false"
+          data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true">
+          <blockquote cite="https://www.facebook.com/facebook" class="fb-xfbml-parse-ignore">
+          <a href="https://www.facebook.com/facebook">Facebook</a></blockquote></div>
     </div> <!-- end widget socials -->
 
     <!-- Widget Twitter -->

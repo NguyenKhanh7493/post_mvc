@@ -60,4 +60,64 @@ class HomeModel extends C_connect{
         }
         return $fb_vn_right;
     }
+    public function news_views_top(){
+        $db = $this->connect();
+        $sql = $db->query("SELECT * FROM `posts` WHERE `views` ORDER BY `views` DESC LIMIT 4");
+        $fb_view = array();
+        if ($sql->num_rows > 0){
+            while ($result = mysqli_fetch_assoc($sql)){
+                $fb_view[] = $result;
+            }
+        }
+        // echo "<pre>";
+        // print_r($fb_view);
+        // echo "/<pre>";    
+         return $fb_view;
+    }
+
+    public function football_english(){
+        $db = $this->connect();
+        $sql = $db ->query("SELECT * FROM `posts` WHERE `type_news_id` = 37 ORDER BY `id` DESC LIMIT 1");
+        $fb_en = array();
+        if ($sql->num_rows > 0){
+            while ($result = mysqli_fetch_assoc($sql)){
+                $fb_en[] = $result;
+            }
+        }
+        return $fb_en;
+    }
+    public function football_english_right(){
+        $db = $this->connect();
+        $sql = $db ->query("SELECT * FROM `posts` WHERE `type_news_id` = 37 ORDER BY `id` DESC LIMIT 7");
+        $fb_en_right = array();
+        if ($sql->num_rows > 0){
+            while ($result = mysqli_fetch_assoc($sql)){
+                $fb_en_right[] = $result;
+            }
+        }
+        return $fb_en_right;
+    }
+
+    public function football_taybannha(){
+        $db = $this->connect();
+        $sql = $db ->query("SELECT * FROM `posts` WHERE `type_news_id` = 36 ORDER BY `id` DESC LIMIT 1");
+        $fb_bn = array();
+        if ($sql->num_rows > 0){
+            while ($result = mysqli_fetch_assoc($sql)){
+                $fb_bn[] = $result;
+            }
+        }
+        return $fb_bn;
+    }
+    public function football_taybannha_right(){
+        $db = $this->connect();
+        $sql = $db ->query("SELECT * FROM `posts` WHERE `type_news_id` = 36 ORDER BY `id` DESC LIMIT 7");
+        $fb_bn_right = array();
+        if ($sql->num_rows > 0){
+            while ($result = mysqli_fetch_assoc($sql)){
+                $fb_bn_right[] = $result;
+            }
+        }
+        return $fb_bn_right;
+    }
 }

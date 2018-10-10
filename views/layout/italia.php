@@ -1,16 +1,16 @@
 <section class="section editors-picks mb-20">
     <div class="title-wrap">
-        <h3 class="section-title">VIỆT NAM</h3>
-        <a href="#" class="all-posts-url">View All</a>
+        <h3 class="section-title">ITALIA</h3>
+        <!-- <a href="#" class="all-posts-url">View All</a> -->
     </div>
     <div class="row">
-        <?php foreach ($fb_vn as $item):?>
+        <?php foreach ($fb_en as $item):?>
             <div class="col-lg-7">
             <article class="entry">
                 <div class="entry__img-holder">
                     <a href="single-post.html">
                         <div class="thumb-container thumb-75">
-                            <img data-src="<?php base_url?>/assets/img/blog/editors_post_img.jpg" src="<?php base_url?>/assets/img/empty.png" class="entry__img lazyload" alt="" />
+                            <img data-src="http://postmvc.site/admin/public/upload/post/rj.jpg" src="<?php base_url?>/assets/img/empty.png" class="entry__img lazyload" alt="" />
                         </div>
                     </a>
                 </div>
@@ -44,18 +44,7 @@
 
         </div>
         <div class="col-lg-5">
-            <?php
-            echo "<pre>";
-            print_r($fb_vn);
-            echo "</pre>";
-            ?>
-
-            <?php
-                echo "<pre>";
-                print_r($fb_vn_right);
-                echo "</pre>";
-            ?>
-            <?php foreach ($fb_vn_right as $result):?>
+            <?php foreach ($fb_en_right as $result):?>
             <ul class="post-list-small">
                 <li class="post-list-small__item">
                     <article class="post-list-small__entry">
