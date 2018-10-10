@@ -28,6 +28,13 @@ class HomeController{
         $fb_bn = $fb_english->football_taybannha();
         $fb_bn_view = new HomeModel();
         $fb_bn_right = $fb_bn_view->football_taybannha_right();
+
+        $fb_english = new HomeModel();
+        $fb_italia = $fb_english->football_italia();
+        $fb_bn_view = new HomeModel();
+        $fb_italia_right = $fb_bn_view->football_italia_right();
+        $fb_bn_view = new HomeModel();
+        $fb_fasion = $fb_bn_view->fasion_post();
         include_once('views/index.php');
     }
 //    public function dequy($data,$parent_id){

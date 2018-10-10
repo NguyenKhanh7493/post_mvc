@@ -120,4 +120,37 @@ class HomeModel extends C_connect{
         }
         return $fb_bn_right;
     }
+    public function football_italia(){
+        $db = $this->connect();
+        $sql = $db ->query("SELECT * FROM `posts` WHERE `type_news_id` = 34 ORDER BY `id` DESC LIMIT 1");
+        $fb_italia = array();
+        if ($sql->num_rows > 0){
+            while ($result = mysqli_fetch_assoc($sql)){
+                $fb_italia[] = $result;
+            }
+        }
+        return $fb_italia;
+    }
+    public function football_italia_right(){
+        $db = $this->connect();
+        $sql = $db ->query("SELECT * FROM `posts` WHERE `type_news_id` = 34 ORDER BY `id` DESC LIMIT 7");
+        $fb_italia_right = array();
+        if ($sql->num_rows > 0){
+            while ($result = mysqli_fetch_assoc($sql)){
+                $fb_italia_right[] = $result;
+            }
+        }
+        return $fb_italia_right;
+    }
+    public function fasion_post(){
+        $db = $this->connect();
+        $sql = $db ->query("SELECT * FROM `fashion_post` ORDER BY `id` DESC LIMIT 3");
+        $fb_fasion = array();
+        if ($sql->num_rows > 0){
+            while ($result = mysqli_fetch_assoc($sql)){
+                $fb_fasion[] = $result;
+            }
+        }
+        return $fb_fasion;
+    }
 }

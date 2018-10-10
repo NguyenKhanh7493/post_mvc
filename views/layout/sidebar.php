@@ -3,7 +3,7 @@
     <!-- Widget Social Subscribers -->
     <div class="widget widget-social-subscribers">
         <div class="fxthome" style="border:solid 1px #ddd;">
-            <div class="tabs"><a class="sel" href="http://bongdaplus.vn/ket-qua.html" style="width:100%;">KẾT QUẢ</a>
+            <div class="tabs-b"><a class="sel" href="http://bongdaplus.vn/ket-qua.html" style="width:100%;">KẾT QUẢ</a>
                 <div class="splf"></div><div class="clr"></div>
             </div><div class="tabitm"><table class="fxtbl" cellpadding="0" cellspacing="0">
                     <tbody>
@@ -66,16 +66,16 @@
             color: #333;
             font-weight: bold;
             text-align: left;}
-        .fxthome .tabs a {
+        .fxthome .tabs-b a {
             background: #ccc;
             color: #000;
             font-weight: normal;
             padding: 0 10px;
         }
-        .tabs a {
+        .tabs-b a {
             display: block;
             font-weight: bold;
-            float: left;
+            /*float: left;*/
             line-height: 30px;
             text-align: center;
             text-transform: uppercase;
@@ -391,14 +391,14 @@
 
     <!-- Widget Carousel -->
     <div class="widget">
-        <h4 class="widget-title">Featured Posts</h4>
+        <h4 class="widget-title">Thời trang sao bóng đá</h4>
         <div id="owl-single" class="owl-carousel owl-theme">
-
+            <?php foreach ($fb_fasion as $fasion):?>
             <article class="entry">
                 <div class="entry__img-holder mb-0">
                     <a href="single-post.html">
                         <div class="thumb-bg-holder">
-                            <img data-src="<?php base_url?>/assets/img/blog/featured_post_img_1.jpg" src="<?php base_url?>/assets/img/blog/featured_post_img_1.jpg" class="entry__img owl-lazy" alt="">
+                            <img style="height: 350px;" data-src="<?php base_url?>/admin/public/upload/post/<?php echo $fasion['thumbnail']?>" src="<?php base_url?>/admin/public/upload/post/<?php echo $fasion['thumbnail']?>" class="entry__img owl-lazy" alt="">
                             <div class="bottom-gradient"></div>
                         </div>
                     </a>
@@ -406,29 +406,11 @@
 
                 <div class="thumb-text-holder">
                     <h2 class="thumb-entry-title thumb-entry-title--sm">
-                        <a href="single-post.html">Myanmar little monk reading book outside monastery</a>
+                        <a href="single-post.html"><?php echo $fasion['title']?></a>
                     </h2>
                 </div>
             </article>
-
-            <article class="entry">
-                <div class="entry__img-holder mb-0">
-                    <a href="single-post.html">
-                        <div class="thumb-bg-holder">
-                            <img data-src="<?php base_url?>/assets/img/blog/featured_post_img_2.jpg" src="<?php base_url?>/assets/img/blog/featured_post_img_2.jpg" class="entry__img owl-lazy" alt="">
-                            <div class="bottom-gradient"></div>
-                        </div>
-                    </a>
-                </div>
-
-                <div class="thumb-text-holder">
-                    <h2 class="thumb-entry-title thumb-entry-title--sm">
-                        <a href="single-post.html">Spectacular display of northern lights illuminates sky</a>
-                    </h2>
-                </div>
-            </article>
-
-
+            <?php endforeach;?>
         </div>
     </div>
 
