@@ -153,4 +153,15 @@ class HomeModel extends C_connect{
         }
         return $fb_fasion;
     }
+    public function other_news(){
+        $db = $this->connect();
+        $sql = $db ->query("SELECT * FROM `other_news` ORDER BY `id` DESC LIMIT 5");
+        $other = array();
+        if ($sql->num_rows > 0){
+            while ($result = mysqli_fetch_assoc($sql)){
+                $other[] = $result;
+            }
+        }
+        return $other;
+    }
 }

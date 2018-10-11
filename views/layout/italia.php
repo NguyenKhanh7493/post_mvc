@@ -19,7 +19,7 @@
                     <div class="entry__header">
 <!--                        <a href="#" class="entry__meta-category">science</a>-->
                         <h2 class="entry__title">
-                            <a href="single-post.html" style="font-size: 20px;"><?php echo $item['title']?></a>
+                            <a href="single-post.html" style="foent-size: 20px;"><?php echo $item['title']?></a>
                         </h2>
 <!--                        <ul class="entry__meta">-->
 <!--                            <li class="entry__meta-author">-->

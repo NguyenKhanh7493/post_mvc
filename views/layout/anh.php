@@ -1,7 +1,6 @@
 <section class="section editors-picks mb-20">
     <div class="title-wrap">
-        <h3 class="section-title">BÓNG ĐÁ ANH</h3>
-        <a href="#" class="all-posts-url" style="border-bottom: double red;">View All</a>
+        <h3 class="section-title" style="border-bottom: double red;">BÓNG ĐÁ ANH</h3>
     </div>
     <div class="row">
         <?php foreach ($fb_vn as $item):?>

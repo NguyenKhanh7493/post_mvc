@@ -416,108 +416,36 @@
 
     <!-- Latest Reviews -->
     <div class="widget widget-reviews">
-        <h4 class="widget-title">Latest Reviews</h4>
+        <h4 class="widget-title">Tin liên quan</h4>
         <ul class="post-list-small">
+            <?php foreach ($other as $others):?>
             <li class="post-list-small__item">
                 <article class="post-list-small__entry clearfix">
                     <div class="post-list-small__img-holder">
                         <div class="thumb-container thumb-75">
                             <a href="single-post.html">
-                                <img data-src="<?php base_url?>/assets/img/blog/review_post_1.jpg" src="<?php base_url?>/assets/img/blog/review_post_1.jpg" alt="" class=" lazyload">
+                                <img data-src="<?php base_url?>/admin/public/upload/post/<?php echo $others['thumbnail']?>" src="<?php base_url?>/assets/img/blog/review_post_1.jpg" alt="" class=" lazyload">
                             </a>
                         </div>
                     </div>
                     <div class="post-list-small__body">
                         <h3 class="post-list-small__entry-title">
-                            <a href="single-post.html">My First Impressions of iPhone X</a>
+                            <a href="single-post.html"><?php echo $others['title']?></a>
                         </h3>
-                        <ul class="entry__meta">
-                            <li class="entry__meta-rating">
-                                <i class="ui-star"></i><!--
-                        --><i class="ui-star"></i><!--
-                        --><i class="ui-star"></i><!--
-                        --><i class="ui-star"></i><!--
-                        --><i class="ui-star-outline"></i>
-                            </li>
-                        </ul>
+<!--                        <ul class="entry__meta">-->
+<!--                            <li class="entry__meta-author">-->
+<!--                                <i class="ui-author"></i>-->
+<!--                                <a href="#">Nguyễn Như Khánh</a>-->
+<!--                            </li>-->
+<!--                            <li class="entry__meta-date">-->
+<!--                                <i class="ui-date"></i>-->
+<!--                                --><?php //echo $others['views']?>
+<!--                            </li>-->
+<!--                        </ul>-->
                     </div>
                 </article>
             </li>
-            <li class="post-list-small__item">
-                <article class="post-list-small__entry clearfix">
-                    <div class="post-list-small__img-holder">
-                        <div class="thumb-container thumb-75">
-                            <a href="single-post.html">
-                                <img data-src="<?php base_url?>/assets/img/blog/review_post_2.jpg" src="<?php base_url?>/assets/img/empty.png" alt="" class=" lazyload">
-                            </a>
-                        </div>
-                    </div>
-                    <div class="post-list-small__body">
-                        <h3 class="post-list-small__entry-title">
-                            <a href="single-post.html">The Best Laptops for Kids</a>
-                        </h3>
-                        <ul class="entry__meta">
-                            <li class="entry__meta-rating">
-                                <i class="ui-star"></i><!--
-                        --><i class="ui-star"></i><!--
-                        --><i class="ui-star"></i><!--
-                        --><i class="ui-star"></i><!--
-                        --><i class="ui-star-outline"></i>
-                            </li>
-                        </ul>
-                    </div>
-                </article>
-            </li>
-            <li class="post-list-small__item">
-                <article class="post-list-small__entry clearfix">
-                    <div class="post-list-small__img-holder">
-                        <div class="thumb-container thumb-75">
-                            <a href="single-post.html">
-                                <img data-src="<?php base_url?>/assets/img/blog/review_post_3.jpg" src="<?php base_url?>/assets/img/empty.png" alt="" class=" lazyload">
-                            </a>
-                        </div>
-                    </div>
-                    <div class="post-list-small__body">
-                        <h3 class="post-list-small__entry-title">
-                            <a href="single-post.html">PS4 Joypads Pre-Orders Start Friday in NYC</a>
-                        </h3>
-                        <ul class="entry__meta">
-                            <li class="entry__meta-rating">
-                                <i class="ui-star"></i><!--
-                        --><i class="ui-star"></i><!--
-                        --><i class="ui-star"></i><!--
-                        --><i class="ui-star"></i><!--
-                        --><i class="ui-star-outline"></i>
-                            </li>
-                        </ul>
-                    </div>
-                </article>
-            </li>
-            <li class="post-list-small__item">
-                <article class="post-list-small__entry clearfix">
-                    <div class="post-list-small__img-holder">
-                        <div class="thumb-container thumb-75">
-                            <a href="single-post.html">
-                                <img data-src="<?php base_url?>/assets/img/blog/review_post_4.jpg" src="<?php base_url?>/assets/img/empty.png" alt="" class=" lazyload">
-                            </a>
-                        </div>
-                    </div>
-                    <div class="post-list-small__body">
-                        <h3 class="post-list-small__entry-title">
-                            <a href="single-post.html">Hands on: Parrot AR Drone 2.0 review</a>
-                        </h3>
-                        <ul class="entry__meta">
-                            <li class="entry__meta-rating">
-                                <i class="ui-star"></i><!--
-                        --><i class="ui-star"></i><!--
-                        --><i class="ui-star"></i><!--
-                        --><i class="ui-star"></i><!--
-                        --><i class="ui-star-outline"></i>
-                            </li>
-                        </ul>
-                    </div>
-                </article>
-            </li>
+            <?php endforeach;?>
         </ul>
     </div>
 

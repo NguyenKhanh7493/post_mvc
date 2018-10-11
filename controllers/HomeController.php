@@ -35,6 +35,8 @@ class HomeController{
         $fb_italia_right = $fb_bn_view->football_italia_right();
         $fb_bn_view = new HomeModel();
         $fb_fasion = $fb_bn_view->fasion_post();
+        $fb_other = new HomeModel();
+        $other = $fb_other->other_news();
         include_once('views/index.php');
     }
 //    public function dequy($data,$parent_id){
