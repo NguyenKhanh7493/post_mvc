@@ -164,4 +164,17 @@ class HomeModel extends C_connect{
         }
         return $other;
     }
+    public function post_video(){
+        $db = $this->connect();
+        $sql = $db->query("SELECT *,`type_news`.`name` as `type_name` FROM  `post_video` 
+                                  INNER JOIN `type_news` ON `post_video`.`type_news_id` = `type_news`.`id`
+                                  ORDER BY `post_video`.`id` DESC LIMIT 6");
+        $arr = array();
+        if ($sql->num_rows >0){
+            while ($result = mysqli_fetch_assoc($sql)){
+                $arr[] = $result;
+            }
+        }
+        return $arr;
+    }
 }

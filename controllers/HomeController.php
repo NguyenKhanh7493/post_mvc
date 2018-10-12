@@ -37,6 +37,8 @@ class HomeController{
         $fb_fasion = $fb_bn_view->fasion_post();
         $fb_other = new HomeModel();
         $other = $fb_other->other_news();
+        $news_video = new HomeModel();
+        $arr = $news_video->post_video();
         include_once('views/index.php');
     }
 //    public function dequy($data,$parent_id){
