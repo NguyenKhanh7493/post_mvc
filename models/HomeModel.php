@@ -60,4 +60,121 @@ class HomeModel extends C_connect{
         }
         return $fb_vn_right;
     }
+    public function news_views_top(){
+        $db = $this->connect();
+        $sql = $db->query("SELECT * FROM `posts` WHERE `views` ORDER BY `views` DESC LIMIT 4");
+        $fb_view = array();
+        if ($sql->num_rows > 0){
+            while ($result = mysqli_fetch_assoc($sql)){
+                $fb_view[] = $result;
+            }
+        }
+        // echo "<pre>";
+        // print_r($fb_view);
+        // echo "/<pre>";    
+         return $fb_view;
+    }
+
+    public function football_english(){
+        $db = $this->connect();
+        $sql = $db ->query("SELECT * FROM `posts` WHERE `type_news_id` = 37 ORDER BY `id` DESC LIMIT 1");
+        $fb_en = array();
+        if ($sql->num_rows > 0){
+            while ($result = mysqli_fetch_assoc($sql)){
+                $fb_en[] = $result;
+            }
+        }
+        return $fb_en;
+    }
+    public function football_english_right(){
+        $db = $this->connect();
+        $sql = $db ->query("SELECT * FROM `posts` WHERE `type_news_id` = 37 ORDER BY `id` DESC LIMIT 7");
+        $fb_en_right = array();
+        if ($sql->num_rows > 0){
+            while ($result = mysqli_fetch_assoc($sql)){
+                $fb_en_right[] = $result;
+            }
+        }
+        return $fb_en_right;
+    }
+
+    public function football_taybannha(){
+        $db = $this->connect();
+        $sql = $db ->query("SELECT * FROM `posts` WHERE `type_news_id` = 36 ORDER BY `id` DESC LIMIT 1");
+        $fb_bn = array();
+        if ($sql->num_rows > 0){
+            while ($result = mysqli_fetch_assoc($sql)){
+                $fb_bn[] = $result;
+            }
+        }
+        return $fb_bn;
+    }
+    public function football_taybannha_right(){
+        $db = $this->connect();
+        $sql = $db ->query("SELECT * FROM `posts` WHERE `type_news_id` = 36 ORDER BY `id` DESC LIMIT 7");
+        $fb_bn_right = array();
+        if ($sql->num_rows > 0){
+            while ($result = mysqli_fetch_assoc($sql)){
+                $fb_bn_right[] = $result;
+            }
+        }
+        return $fb_bn_right;
+    }
+    public function football_italia(){
+        $db = $this->connect();
+        $sql = $db ->query("SELECT * FROM `posts` WHERE `type_news_id` = 34 ORDER BY `id` DESC LIMIT 1");
+        $fb_italia = array();
+        if ($sql->num_rows > 0){
+            while ($result = mysqli_fetch_assoc($sql)){
+                $fb_italia[] = $result;
+            }
+        }
+        return $fb_italia;
+    }
+    public function football_italia_right(){
+        $db = $this->connect();
+        $sql = $db ->query("SELECT * FROM `posts` WHERE `type_news_id` = 34 ORDER BY `id` DESC LIMIT 7");
+        $fb_italia_right = array();
+        if ($sql->num_rows > 0){
+            while ($result = mysqli_fetch_assoc($sql)){
+                $fb_italia_right[] = $result;
+            }
+        }
+        return $fb_italia_right;
+    }
+    public function fasion_post(){
+        $db = $this->connect();
+        $sql = $db ->query("SELECT * FROM `fashion_post` ORDER BY `id` DESC LIMIT 3");
+        $fb_fasion = array();
+        if ($sql->num_rows > 0){
+            while ($result = mysqli_fetch_assoc($sql)){
+                $fb_fasion[] = $result;
+            }
+        }
+        return $fb_fasion;
+    }
+    public function other_news(){
+        $db = $this->connect();
+        $sql = $db ->query("SELECT * FROM `other_news` ORDER BY `id` DESC LIMIT 5");
+        $other = array();
+        if ($sql->num_rows > 0){
+            while ($result = mysqli_fetch_assoc($sql)){
+                $other[] = $result;
+            }
+        }
+        return $other;
+    }
+    public function post_video(){
+        $db = $this->connect();
+        $sql = $db->query("SELECT *,`type_news`.`name` as `type_name` FROM  `post_video` 
+                                  INNER JOIN `type_news` ON `post_video`.`type_news_id` = `type_news`.`id`
+                                  ORDER BY `post_video`.`id` DESC LIMIT 6");
+        $arr = array();
+        if ($sql->num_rows >0){
+            while ($result = mysqli_fetch_assoc($sql)){
+                $arr[] = $result;
+            }
+        }
+        return $arr;
+    }
 }

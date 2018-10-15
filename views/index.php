@@ -34,17 +34,17 @@
                 <?php include_once('layout/hotsnew.php');?><!-- end hot news -->
 
                 <!-- Latest News -->
-                <?php include_once('layout/latestnews.php');?><!-- end latest news -->
+                <?php include_once('layout/anh.php');?><!-- end latest news -->
 
                 <!-- Ad Banner 728 -->
-                <?php include_once('layout/editorpick.php');?><!-- end editors picks -->
-
+                <?php include_once('layout/vietnam.php');?><!-- end editors picks -->
+                <!-- Ad Banner 728 -->
+                <?php include_once('layout/taybannha.php');?><!-- end editors picks -->
+                <!-- Ad Banner 728 -->
+                <?php include_once('layout/italia.php');?><!-- end editors picks -->
                 <!-- Posts from categories -->
                 <?php include_once('layout/videos.php');?>
                  <!-- end posts from categories -->
-
-                <!-- Carousel posts -->
-                <?php include_once('layout/morenews.php');?>
             </div> <!-- end posts -->
 
             <!-- Sidebar -->
