@@ -10,7 +10,7 @@
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,700' rel='stylesheet'>
 
     <!-- Css -->
-    <link rel="stylesheet" href="<?php base_url?>/assets/css/bootstrap.min.css" />
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
     <link rel="stylesheet" href="<?php base_url?>/assets/css/font-icons.css" />
     <link rel="stylesheet" href="<?php base_url?>/assets/css/style.css" />
 

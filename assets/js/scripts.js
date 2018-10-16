@@ -356,3 +356,9 @@
   });
 
 })(jQuery);
+
+//test
+// $('#blogCarousel').carousel({
+//     interval: 10000
+// });
+//test

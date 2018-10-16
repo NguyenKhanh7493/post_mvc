@@ -1,5 +1,5 @@
 <script src="<?php base_url?>/assets/js/jquery.min.js"></script>
-<script src="<?php base_url?>/assets/js/bootstrap.min.js"></script>
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
 <script src="<?php base_url?>/assets/js/easing.min.js"></script>
 <script src="<?php base_url?>/assets/js/owl-carousel.min.js"></script>
 <script src="<?php base_url?>/assets/js/twitterFetcher_min.js"></script>
