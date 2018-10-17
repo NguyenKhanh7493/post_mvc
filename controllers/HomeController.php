@@ -39,6 +39,10 @@ class HomeController{
         $other = $fb_other->other_news();
         $news_video = new HomeModel();
         $arr = $news_video->post_video();
+        $life_football = new HomeModel();
+        $life = $life_football->life_football();
+        $life_soccer = new HomeModel();
+        $life_image = $life_soccer->life_soccer();
         include_once('views/index.php');
     }
 //    public function dequy($data,$parent_id){

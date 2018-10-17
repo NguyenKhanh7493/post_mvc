@@ -166,9 +166,10 @@ class HomeModel extends C_connect{
     }
     public function post_video(){
         $db = $this->connect();
-        $sql = $db->query("SELECT *,`type_news`.`name` as `type_name` FROM  `post_video` 
-                                  INNER JOIN `type_news` ON `post_video`.`type_news_id` = `type_news`.`id`
-                                  ORDER BY `post_video`.`id` DESC LIMIT 6");
+        $sql = $db->query("SELECT *,`type_news`.`name` as `type_name` FROM  `posts` 
+                                  INNER JOIN `type_news` ON `posts`.`type_news_id` = `type_news`.`id`
+                                  WHERE `type_id` = 4
+                                  ORDER BY `posts`.`id` DESC LIMIT 6");
         $arr = array();
         if ($sql->num_rows >0){
             while ($result = mysqli_fetch_assoc($sql)){
@@ -176,5 +177,27 @@ class HomeModel extends C_connect{
             }
         }
         return $arr;
+    }
+    public function life_football(){
+        $db = $this->connect();
+        $sql = $db->query("SELECT * FROM `posts` WHERE `type_id` = 5 ORDER BY `id` DESC LIMIT 1");
+        $life = array();
+        if ($sql->num_rows >0){
+            while ($result = mysqli_fetch_assoc($sql)){
+                $life[] = $result;
+            }
+            return $life;
+        }
+    }
+    public function life_soccer(){
+        $db = $this->connect();
+        $sql = $db->query("SELECT * FROM `posts` WHERE `type_id` = 5 ORDER BY `id` DESC LIMIT 5");
+        $life_soccer = array();
+        if ($sql->num_rows >0){
+            while ($result = mysqli_fetch_assoc($sql)){
+                $life_soccer[] = $result;
+            }
+            return $life_soccer;
+        }
     }
 }

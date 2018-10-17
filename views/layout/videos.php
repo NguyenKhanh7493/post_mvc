@@ -9,15 +9,17 @@
             <div class="col-md-12 mb-30">
 
 <!--                border: double 4px red;border-radius: 3px;-->
+                <?php foreach ($life as $life1):?>
                 <article class="entry" style="margin-bottom: -15px;border-bottom: dotted 1px red;">
                     <div class="entry__img-holder">
                         <a href="single-post.html">
                             <div class="thumb-container thumb-75">
-                                <img data-src="<?php base_url?>/admin/public/upload/post/degea.jpg" class="entry__img lazyload" alt="" />
+                                <img data-src="<?php base_url?>/admin/public/upload/post/<?php echo $life1['thumbnail']?>" class="entry__img lazyload" alt="" />
                             </div>
                         </a>
                     </div>
                 </article>
+                <?php endforeach;?>
             </div> <!-- end world -->
 
             <!-- Science -->
@@ -40,30 +42,16 @@
 
                     <div class="carousel-item active">
                         <div class="row">
+                            <?php foreach ($life_image as $life_image1):?>
+                                <?php if ($life[0]['id'] != $life_image1['id']):?>
                             <div class="col-md-3">
                                 <a href="#">
-                                    <img src="<?php base_url?>/admin/public/upload/post/degea.jpg" alt="Image" style="max-width:100%;">
-                                    <h3 class="entry__title_h3">Cầu thủ xuất sắc nhất trận là đây bà con cô bác ơi</h3>
+                                    <img src="<?php base_url?>/admin/public/upload/post/<?php echo $life_image1['thumbnail']?>" alt="Image" style="max-width:100%;">
+                                    <h3 class="entry__title_h3"><?php echo $life_image1['title']?></h3>
                                 </a>
                             </div>
-                            <div class="col-md-3">
-                                <a href="#">
-                                    <img src="<?php base_url?>/admin/public/upload/post/degea.jpg" alt="Image" style="max-width:100%;">
-                                    <h3 class="entry__title_h3">Mu vô địch được hay ko vậy nhỉ</h3>
-                                </a>
-                            </div>
-                            <div class="col-md-3">
-                                <a href="#">
-                                    <img src="<?php base_url?>/admin/public/upload/post/degea.jpg" alt="Image" style="max-width:100%;">
-                                    <h3 class="entry__title_h3">Mu vô địch cúp c1 châu âu nè</h3>
-                                </a>
-                            </div>
-                            <div class="col-md-3">
-                                <a href="#">
-                                    <img src="<?php base_url?>/admin/public/upload/post/degea.jpg" alt="Image" style="max-width:100%;">
-                                    <h3 class="entry__title_h3">Mu vô địch cúp c1 châu âu nè</h3>
-                                </a>
-                            </div>
+                                    <?php endif;?>
+                            <?php endforeach;?>
                         </div>
                         <!--.row-->
                     </div>
