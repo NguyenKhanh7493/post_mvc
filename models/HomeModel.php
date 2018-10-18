@@ -100,7 +100,7 @@ class HomeModel extends C_connect{
 
     public function football_taybannha(){
         $db = $this->connect();
-        $sql = $db ->query("SELECT * FROM `posts` WHERE `type_news_id` = 36 ORDER BY `id` DESC LIMIT 1");
+        $sql = $db ->query("SELECT * FROM `posts` WHERE `type_news_id` = 33 ORDER BY `id` DESC LIMIT 1");
         $fb_bn = array();
         if ($sql->num_rows > 0){
             while ($result = mysqli_fetch_assoc($sql)){
@@ -111,7 +111,7 @@ class HomeModel extends C_connect{
     }
     public function football_taybannha_right(){
         $db = $this->connect();
-        $sql = $db ->query("SELECT * FROM `posts` WHERE `type_news_id` = 36 ORDER BY `id` DESC LIMIT 7");
+        $sql = $db ->query("SELECT * FROM `posts` WHERE `type_news_id` = 33 ORDER BY `id` DESC LIMIT 7");
         $fb_bn_right = array();
         if ($sql->num_rows > 0){
             while ($result = mysqli_fetch_assoc($sql)){
@@ -144,7 +144,7 @@ class HomeModel extends C_connect{
     }
     public function fasion_post(){
         $db = $this->connect();
-        $sql = $db ->query("SELECT * FROM `fashion_post` ORDER BY `id` DESC LIMIT 3");
+        $sql = $db ->query("SELECT * FROM `posts` WHERE `type_id` = 6 ORDER BY `id` DESC LIMIT 3");
         $fb_fasion = array();
         if ($sql->num_rows > 0){
             while ($result = mysqli_fetch_assoc($sql)){
@@ -155,7 +155,7 @@ class HomeModel extends C_connect{
     }
     public function other_news(){
         $db = $this->connect();
-        $sql = $db ->query("SELECT * FROM `other_news` ORDER BY `id` DESC LIMIT 5");
+        $sql = $db ->query("SELECT * FROM `posts` WHERE `type_id` = 3 ORDER BY `id` DESC LIMIT 5");
         $other = array();
         if ($sql->num_rows > 0){
             while ($result = mysqli_fetch_assoc($sql)){

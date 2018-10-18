@@ -7,19 +7,22 @@
                 <div class="splf"></div><div class="clr"></div>
             </div><div class="tabitm"><table class="fxtbl" cellpadding="0" cellspacing="0">
                     <tbody>
-                    <tr><th class="grp" colspan="11"> | <b style="font-weight: bold">Champions League C1</b></th></tr>
-                    <tr><td class="hme">Porto</td><td class="tme">1-0</td><td class="awy">Galatasaray</td>
-                    </tr><tr><td class="hme">PSV Eindhoven</td><td class="tme">1-2</td><td class="awy">Inter Milan</td>
-                    </tr><tr><td class="hme">Atletico Madrid</td><td class="tme">3-1</td><td class="awy">Club Brugge</td>
-                    </tr><tr><td class="hme">Dortmund</td><td class="tme">3-0</td><td class="awy">AS Monaco</td></tr><tr>
-                        <td class="hme">Napoli</td><td class="tme">1-0</td><td class="awy">Liverpool</td></tr><tr>
-                        <td class="hme">Tottenham</td><td class="tme">2-4</td><td class="awy">Barcelona</td></tr><tr>
-                        <td class="hme">Lokomotiv Moscow</td><td class="tme">0-1</td><td class="awy">Schalke 04</td></tr>
-                    <tr><td class="hme">PSG</td><td class="tme">6-1</td><td class="awy">Crvena Zvezda</td></tr><tr><td class="hme">AEK Athens</td><td class="tme">2-3</td>
-                        <td class="awy">Benfica</td></tr><tr><td class="hme">Lyonnais</td><td class="tme">2-2</td>
-                        <td class="awy">Shakhtar Donetsk</td></tr></tbody></table></div></div>
+                    <tr><th class="" colspan="11" style="border-bottom: 0.5px solid #ddd"> | <b style="font-weight: bold">Champions League C1</b></th></tr>
+                    <tr><td class="">Porto</td><td class="">1-0</td><td class="">Galatasaray</td>
+                    </tr><tr><td class="">PSV Eindhoven</td><td class="">1-2</td><td class="">Inter Milan</td>
+                    </tr><tr><td class="">Atletico Madrid</td><td class="">3-1</td><td class="">Club Brugge</td>
+                    </tr><tr><td class="">Dortmund</td><td class="">3-0</td><td class="">AS Monaco</td></tr><tr>
+                        <td class="">Napoli</td><td class="">1-0</td><td class="">Liverpool</td></tr><tr>
+                        <td class="">Tottenham</td><td class="">2-4</td><td class="">Barcelona</td></tr><tr>
+                        <td class="">Lokomotiv Moscow</td><td class="">0-1</td><td class="">Schalke 04</td></tr>
+                    <tr><td class="">PSG</td><td class="">6-1</td><td class="">Crvena Zvezda</td></tr><tr><td class="">AEK Athens</td><td class="">2-3</td>
+                        <td class="">Benfica</td></tr><tr><td class="">Lyonnais</td><td class="">2-2</td>
+                        <td class="">Shakhtar Donetsk</td></tr></tbody></table></div></div>
     </div>
     <style type="text/css">
+        .tabitm{
+            font-weight: 700;
+        }
         .fxthome .tabs {
             background: #ccc;
             font-size: 16px;}
@@ -82,19 +85,19 @@
         }
     </style>
     <!-- Widget Newsletter -->
-    <div class="widget widget_mc4wp_form_widget">
-        <h4 class="widget-title">Subscribe for news</h4>
-        <form class="mc4wp-form" method="post">
-            <div class="mc4wp-form-fields">
-                <p>
-                    <input type="email" name="EMAIL" placeholder="Your email" required="">
-                </p>
-                <p>
-                    <input type="submit" class="btn btn-lg btn-color" value="Subscribe">
-                </p>
-            </div>
-        </form>
-    </div> <!-- end widget newsletter -->
+<!--    <div class="widget widget_mc4wp_form_widget">-->
+<!--        <h4 class="widget-title">Subscribe for news</h4>-->
+<!--        <form class="mc4wp-form" method="post">-->
+<!--            <div class="mc4wp-form-fields">-->
+<!--                <p>-->
+<!--                    <input type="email" name="EMAIL" placeholder="Your email" required="">-->
+<!--                </p>-->
+<!--                <p>-->
+<!--                    <input type="submit" class="btn btn-lg btn-color" value="Subscribe">-->
+<!--                </p>-->
+<!--            </div>-->
+<!--        </form>-->
+<!--    </div> <!-- end widget newsletter -->-->
 
     <!-- Widget Popular/Latest Posts -->
     <div class="widget widget-tabpost">
@@ -354,7 +357,7 @@
 (document, 'script', 'facebook-jssdk'));
 </script>
     <!--  -->
-    <div class="widget widget-socials">
+    <div class="widget widget_media_image">
         <h4 class="widget-title">LIKE PAGE FACEBOOK</h4>
         <div class="fb-page" data-href="https://www.facebook.com/facebook" data-tabs="272"
          data-width="300" data-height="250" data-small-header="false"
@@ -364,12 +367,12 @@
     </div> <!-- end widget socials -->
 
     <!-- Widget Twitter -->
-    <div class="widget">
-        <h4 class="widget-title">Our tweets</h4>
-        <div class="tweets-container">
-            <div id="tweets"></div>
-        </div>
-    </div>
+<!--    <div class="widget">-->
+<!--        <h4 class="widget-title">Our tweets</h4>-->
+<!--        <div class="tweets-container">-->
+<!--            <div id="tweets"></div>-->
+<!--        </div>-->
+<!--    </div>-->
 
     <!-- Widget Ad 125 -->
     <div class="widget widget-gallery-sm">
@@ -453,14 +456,14 @@
     <div class="widget widget_tag_cloud">
         <h4 class="widget-title">Tags</h4>
         <div class="tagcloud">
-            <a href="#">Magazine</a>
-            <a href="#">Creative</a>
-            <a href="#">Responsive</a>
-            <a href="#">Modern</a>
-            <a href="#">Tech</a>
-            <a href="#">WordPress</a>
-            <a href="#">Website</a>
-            <a href="#">News</a>
+            <a href="#">Wayne Rooney</a>
+            <a href="#">Cristiano Ronaldo</a>
+            <a href="#">Lionel Messi</a>
+            <a href="#">Paul Pogba</a>
+            <a href="#">Zlatan Ibrahimović</a>
+            <a href="#">Ander Herrera</a>
+            <a href="#">Nemanja Matić</a>
+            <a href="#">Robin van Persie</a>
         </div>
     </div>
 
