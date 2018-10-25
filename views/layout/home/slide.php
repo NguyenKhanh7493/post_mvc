@@ -1,3 +1,17 @@
+<div class="trending-now">
+    <div class="container relative">
+        <span class="trending-now__label">Tin cập nhật</span>
+        <ul class="newsticker">
+            <li class="newsticker__item"><a href="single-post.html" class="newsticker__item-url">Hình ảnh áo đấu các đội bóng đá Ngoại hạng anh mùa 2018/2019</a></li>
+            <li class="newsticker__item"><a href="single-post-1.html" class="newsticker__item-url">Hình ảnh các cầu thủ MU trên sân tập</a></li>
+            <li class="newsticker__item"><a href="single-post-3.html" class="newsticker__item-url">L.Shaw có thể quay trở lại trận đấu cuối tuần này sau chấn thương</a></li>
+        </ul>
+        <div class="newsticker-buttons">
+            <button class="newsticker-button newsticker-button--prev" id="newsticker-button--prev" aria-label="next article"><i class="ui-arrow-left"></i></button>
+            <button class="newsticker-button newsticker-button--next" id="newsticker-button--next" aria-label="previous article"><i class="ui-arrow-right"></i></button>
+        </div>
+    </div>
+</div>
 <section class="featured-posts-grid bg-dark">
     <div class="container clearfix">
 

@@ -20,7 +20,7 @@
     <!-- Navigation -->
     <?php include_once('layout/header.php');?>
     <!-- Featured Posts Grid -->
-    <?php include_once('layout/slide.php');?><!-- end featured posts grid -->
+    <?php include_once('layout/home/slide.php');?><!-- end featured posts grid -->
 
     <div class="main-container container mt-40" id="main-container">
 
@@ -31,24 +31,24 @@
             <div class="col-lg-8 blog__content mb-30">
 
                 <!-- Hot News -->
-                <?php include_once('layout/hotsnew.php');?><!-- end hot news -->
+                <?php include_once('layout/home/hotsnew.php');?><!-- end hot news -->
 
                 <!-- Latest News -->
-                <?php include_once('layout/anh.php');?><!-- end latest news -->
+                <?php include_once('layout/home/anh.php');?><!-- end latest news -->
 
                 <!-- Ad Banner 728 -->
-                <?php include_once('layout/vietnam.php');?><!-- end editors picks -->
+                <?php include_once('layout/home/vietnam.php');?><!-- end editors picks -->
                 <!-- Ad Banner 728 -->
-                <?php include_once('layout/taybannha.php');?><!-- end editors picks -->
+                <?php include_once('layout/home/taybannha.php');?><!-- end editors picks -->
                 <!-- Ad Banner 728 -->
-                <?php include_once('layout/italia.php');?><!-- end editors picks -->
+                <?php include_once('layout/home/italia.php');?><!-- end editors picks -->
                 <!-- Posts from categories -->
-                <?php include_once('layout/videos.php');?>
+                <?php include_once('layout/home/videos.php');?>
                  <!-- end posts from categories -->
             </div> <!-- end posts -->
 
             <!-- Sidebar -->
-            <?php include_once('layout/sidebar.php');?>
+            <?php include_once('layout/home/sidebar.php');?>
              <!-- end sidebar -->
 
         </div> <!-- end content -->

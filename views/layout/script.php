@@ -5,4 +5,5 @@
 <script src="<?php base_url?>/assets/js/twitterFetcher_min.js"></script>
 <script src="<?php base_url?>/assets/js/jquery.newsTicker.min.js"></script>
 <script src="<?php base_url?>/assets/js/modernizr.min.js"></script>
+<script src="<?php base_url?>/assets/js/jquery.appear.min.js"></script>
 <script src="<?php base_url?>/assets/js/scripts.js"></script>

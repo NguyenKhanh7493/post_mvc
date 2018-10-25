@@ -19,7 +19,7 @@
                 <nav class="flex-child nav__wrap d-none d-lg-block">
                     <ul class="nav__menu">
                         <li class="active">
-                            <a href="index.html">HOME</a>
+                            <a href="trang-chu">HOME</a>
                         </li>
 
                         <?php foreach ($data as $item):?>
@@ -37,7 +37,7 @@
                             <?php endif;?>
                         <?php endforeach;?>
                         <li>
-                            <a href="#">LIÊN HỆ</a>
+                            <a href="contact">LIÊN HỆ</a>
                         </li>
                     </ul> <!-- end menu -->
                 </nav> <!-- end nav-wrap -->
@@ -108,18 +108,4 @@
     </div>
 </div>
 <!--end logo-->
-<div class="trending-now">
-    <div class="container relative">
-        <span class="trending-now__label">Tin cập nhật</span>
-        <ul class="newsticker">
-            <li class="newsticker__item"><a href="single-post.html" class="newsticker__item-url">Hình ảnh áo đấu các đội bóng đá Ngoại hạng anh mùa 2018/2019</a></li>
-            <li class="newsticker__item"><a href="single-post-1.html" class="newsticker__item-url">Hình ảnh các cầu thủ MU trên sân tập</a></li>
-            <li class="newsticker__item"><a href="single-post-3.html" class="newsticker__item-url">L.Shaw có thể quay trở lại trận đấu cuối tuần này sau chấn thương</a></li>
-        </ul>
-        <div class="newsticker-buttons">
-            <button class="newsticker-button newsticker-button--prev" id="newsticker-button--prev" aria-label="next article"><i class="ui-arrow-left"></i></button>
-            <button class="newsticker-button newsticker-button--next" id="newsticker-button--next" aria-label="previous article"><i class="ui-arrow-right"></i></button>
-        </div>
-    </div>
-</div>
 <!--trending now-->
