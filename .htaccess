@@ -1,6 +1,7 @@
 RewriteEngine On
 RewriteRule "trang-chu" "?controller=Home&action=index"
 RewriteRule "contact" "?controller=Contact&action=contact"
+RewriteRule "about" "?controller=About&action=about"
 #RewriteRule "^([a-zA-Z0-9]+)$" "?controller=Common&action=$1"
 #RewriteRule "^user/([a-zA-Z0-9]+)$" "?controller=User&action=$1"
 #RewriteRule "^user/([a-zA-Z0-9]+)$" "?controller=User&action=$1"
